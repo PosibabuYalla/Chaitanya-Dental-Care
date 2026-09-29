@@ -1,0 +1,58 @@
+import type { Testimonial } from "@/lib/types";
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "t1",
+    name: "Vikram Singh",
+    initials: "VS",
+    treatment: "Dental Implants",
+    rating: 5,
+    quote: "I put off replacing a missing molar for years out of fear. The team explained every step before it happened, and the implant feels completely natural now — I forget it's not my original tooth.",
+    tone: "sky",
+  },
+  {
+    id: "t2",
+    name: "Ritu Malhotra",
+    initials: "RM",
+    treatment: "Clear Aligners",
+    rating: 5,
+    quote: "Ten months of aligners and barely anyone at work noticed I was straightening my teeth. The check-ins were quick and the results matched the preview exactly.",
+    tone: "lavender",
+  },
+  {
+    id: "t3",
+    name: "Aditya Bose",
+    initials: "AB",
+    treatment: "Root Canal Treatment",
+    rating: 5,
+    quote: "I expected the worst based on stories from friends. It was genuinely painless, and the pain I came in with was gone within a day. Wish I hadn't waited so long.",
+    tone: "pink",
+  },
+  {
+    id: "t4",
+    name: "Kavya Iyer",
+    initials: "KI",
+    treatment: "Cosmetic Dentistry",
+    rating: 5,
+    quote: "The smile design preview sold me before we even started. Seeing the mock-up first meant zero surprises — the final veneers look exactly like my own teeth, just better.",
+    tone: "gold",
+  },
+  {
+    id: "t5",
+    name: "Neha & Rahul Gupta",
+    initials: "NG",
+    treatment: "Pediatric Dentistry",
+    rating: 5,
+    quote: "Our daughter used to cry before every dental visit. Dr. Arjun's team turned that around completely — she now asks when her next 'tooth checkup' is.",
+    tone: "sky",
+  },
+  {
+    id: "t6",
+    name: "Farhan Ahmed",
+    initials: "FA",
+    treatment: "Teeth Whitening",
+    rating: 4,
+    quote: "Quick, professional, and the shade guide comparison at the end was a nice touch. Eight shades brighter in under 90 minutes.",
+    tone: "pink",
+  },
+];
