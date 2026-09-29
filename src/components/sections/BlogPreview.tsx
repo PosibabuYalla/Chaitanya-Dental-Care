@@ -41,7 +41,7 @@ export default function BlogPreview() {
                   <span className="flex items-center gap-1.5">
                     <LuClock className="h-3.5 w-3.5" /> {post.readTime}
                   </span>
-                  <span className="inline-flex items-center gap-1 font-semibold text-gold-deep transition-transform group-hover:translate-x-1">
+                  <span className="inline-flex items-center gap-1 font-semibold text-coral-deep transition-transform group-hover:translate-x-1">
                     Read More <LuArrowRight className="h-3 w-3" />
                   </span>
                 </div>

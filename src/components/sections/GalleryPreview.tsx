@@ -14,6 +14,7 @@ const spanClasses: Record<string, string> = {
   tall: "row-span-2",
   wide: "sm:col-span-2",
   square: "",
+  large: "col-span-2 row-span-2",
 };
 
 export default function GalleryPreview() {

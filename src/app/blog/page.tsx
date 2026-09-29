@@ -6,7 +6,7 @@ import BlogList from "@/components/blog/BlogList";
 export const metadata: Metadata = pageMetadata({
   title: "Dental Health Blog",
   description:
-    "Dentist-written guides on implants, braces vs aligners, root canals, gum health and children's dental care from the team at Chaithanya Dental Hospital, Hyderabad.",
+    "Dentist-written guides on implants, braces vs aligners, root canals, gum health and children's dental care from the team at Chaithanya Dental Hospital, Vijayawada.",
   path: "/blog",
 });
 

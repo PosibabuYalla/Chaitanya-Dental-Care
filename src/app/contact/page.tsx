@@ -7,7 +7,7 @@ import ContactForm from "@/components/contact/ContactForm";
 export const metadata: Metadata = pageMetadata({
   title: "Contact & Directions",
   description:
-    "Visit Chaithanya Dental Hospital at 142 Lakeview Boulevard, Banjara Hills, Hyderabad. Call +91 98765 43210, email us, or check opening hours and directions.",
+    "Visit Chaithanya Dental Hospital at Panchumarthi Complex, Tadigadapa, Poranki, Vijayawada. Call +91 86397 99150, email us, or check opening hours and directions.",
   path: "/contact",
 });
 

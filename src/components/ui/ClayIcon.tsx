@@ -50,7 +50,7 @@ export const variantIcon: Record<ClayVariant, IconType> = {
 const toneClasses: Record<ClayTone, string> = {
   pink: "bg-sky-soft/25 text-sky-deep",
   sky: "bg-sky/20 text-sky-deep",
-  gold: "bg-sky-deep/15 text-sky-deep",
+  coral: "bg-coral/25 text-coral-deep",
   ivory: "bg-white/40 text-ink-soft",
   lavender: "bg-lavender-deep/20 text-sky-deep",
 };

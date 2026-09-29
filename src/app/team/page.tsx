@@ -7,7 +7,7 @@ import SimpleCTA from "@/components/sections/SimpleCTA";
 export const metadata: Metadata = pageMetadata({
   title: "Our Dentists & Specialists",
   description:
-    "Meet the dental surgeons, orthodontists, implantologists and hygienists at Chaithanya Dental Hospital, Banjara Hills — specialists known for gentle chairside care.",
+    "Meet the dental surgeons, orthodontists, implantologists and hygienists at Chaithanya Dental Hospital, Tadigadapa — specialists known for gentle chairside care.",
   path: "/team",
 });
 

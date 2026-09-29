@@ -26,7 +26,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${siteConfig.name} – Dentist in Banjara Hills, Hyderabad`,
+    default: `${siteConfig.name} – Dentist in Tadigadapa, Vijayawada`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.seoDescription,

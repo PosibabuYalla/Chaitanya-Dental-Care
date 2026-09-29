@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
-import { LuMenu, LuX, LuSearch, LuCalendarDays, LuArrowRight } from "react-icons/lu";
+import { LuMenu, LuX, LuCalendarDays, LuArrowRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import Logo from "./Logo";
 
@@ -58,13 +58,10 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <button className="hidden h-9 w-9 items-center justify-center rounded-full text-ink-soft hover:text-ink sm:flex" aria-label="Search">
-              <LuSearch className="h-4.5 w-4.5" />
-            </button>
             <Link
               href="/appointment"
               data-cursor-hover
-              className="hidden items-center gap-2 rounded-full bg-sky px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-sky/30 hover:bg-sky-deep transition-colors sm:flex"
+              className="hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition-colors sm:flex bg-gradient-to-r from-coral to-coral-strong text-ink shadow-lg shadow-coral/50 hover:shadow-xl hover:shadow-coral/70 hover:brightness-110"
             >
               <LuCalendarDays className="h-4 w-4" />
               Book Appointment
@@ -112,7 +109,7 @@ export default function Navbar() {
                 </motion.div>
               ))}
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-4 w-full max-w-xs">
-                <Link href="/appointment" onClick={() => setOpen(false)} className="flex w-full items-center justify-center gap-2 rounded-full bg-sky py-4 font-bold text-white">
+                <Link href="/appointment" onClick={() => setOpen(false)} className="flex w-full items-center justify-center gap-2 rounded-full py-4 font-bold bg-gradient-to-r from-coral to-coral-strong text-ink shadow-lg shadow-coral/50 hover:shadow-xl hover:shadow-coral/70 hover:brightness-110">
                   <LuCalendarDays className="h-4 w-4" /> Book Appointment
                 </Link>
               </motion.div>

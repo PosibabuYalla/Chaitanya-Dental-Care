@@ -26,7 +26,7 @@ export default function NotFound() {
             Book an Appointment
           </ClayButton>
         </div>
-        <Link href="/services" className="text-sm font-semibold text-gold-deep hover:underline" data-cursor-hover>
+        <Link href="/services" className="text-sm font-semibold text-coral-deep hover:underline" data-cursor-hover>
           Or browse our services →
         </Link>
       </ClayContainer>

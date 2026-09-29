@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/data/site";
 
-// Set NEXT_PUBLIC_SITE_URL to the live domain before launch; canonical URLs,
-// the sitemap, robots.txt and structured data all derive from it.
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.chaithanyadental.example").replace(/\/$/, "");
+// Canonical URLs, the sitemap, robots.txt and structured data all derive from
+// this. NEXT_PUBLIC_SITE_URL wins when set (custom domain); on Vercel it falls
+// back to the project's production domain, which Vercel exposes at build time.
+const vercelProductionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (vercelProductionUrl ? `https://${vercelProductionUrl}` : "https://www.chaithanyadental.example")
+).replace(/\/$/, "");
 
 export const absoluteUrl = (path = "/") => `${SITE_URL}${path === "/" ? "" : path}`;
 
@@ -77,12 +82,12 @@ export function dentistJsonLd() {
     description: siteConfig.seoDescription,
     url: SITE_URL,
     image: absoluteUrl("/opengraph-image"),
-    logo: absoluteUrl("/icon.svg"),
+    logo: absoluteUrl("/logo.png"),
     telephone: siteConfig.phone.replace(/\s/g, ""),
     email: siteConfig.email,
     priceRange: "₹₹",
     medicalSpecialty: "Dentistry",
-    areaServed: { "@type": "City", name: a.locality },
+    areaServed: { "@type": "City", name: a.city },
     address: {
       "@type": "PostalAddress",
       streetAddress: a.street,

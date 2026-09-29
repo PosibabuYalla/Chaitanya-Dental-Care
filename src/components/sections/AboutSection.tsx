@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import { photos } from "@/lib/images";
+import doctorTreating from "@/components/gallery/Doctor treating Patient.webp";
 import ToothFrame from "@/components/ui/ToothFrame";
 import { LuArrowRight, LuPlay, LuUsers, LuStar, LuHeart, LuEye, LuTarget, LuGem } from "react-icons/lu";
 
@@ -111,13 +111,13 @@ export default function AboutSection() {
               <span className="relative inline-block text-sky">
                 Confident Smiles
                 <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 260 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 8 Q130 2 256 8" stroke="#38b6e8" strokeWidth="3" strokeLinecap="round" fill="none"/>
+                  <path d="M4 8 Q130 2 256 8" stroke="#ff7a00" strokeWidth="3.5" strokeLinecap="round" fill="none"/>
                 </svg>
               </span>
             </h2>
 
             <p className="max-w-md text-base leading-relaxed text-ink-soft">
-              At Chaithanya Dental Hospital in Banjara Hills, Hyderabad, we believe a healthy smile can brighten your life. With advanced
+              At Chaithanya Dental Hospital in Tadigadapa, Vijayawada, we believe a healthy smile can brighten your life. With advanced
               technology, expert dentists, and a patient-first approach, we provide gentle, precise, and
               long-lasting dental care for every stage of life.
             </p>
@@ -170,12 +170,13 @@ export default function AboutSection() {
               {/* Doctor & patient photo, clipped to a tooth silhouette */}
               <ToothFrame className="w-[250px] sm:w-[320px] lg:w-[340px]">
                 <Image
-                  src={photos.consultation.src}
-                  alt={photos.consultation.alt}
+                  src={doctorTreating}
+                  alt="Doctor treating a patient at Chaitanya Dental Care"
                   fill
+                  placeholder="blur"
                   sizes="(min-width: 1024px) 340px, (min-width: 640px) 320px, 250px"
                   quality={75}
-                  className="object-cover object-[55%_35%]"
+                  className="object-cover"
                 />
               </ToothFrame>
               {/* Dashed orbit dots */}

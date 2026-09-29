@@ -28,7 +28,7 @@ export default function ServiceDetailHero({ service }: { service: Service }) {
               Book This Treatment
             </ClayButton>
             <span className="glass-pill inline-flex items-center gap-2 px-4 py-3 text-sm font-semibold text-ink">
-              <LuClock className="h-4 w-4 text-gold-deep" /> {service.duration}
+              <LuClock className="h-4 w-4 text-coral-deep" /> {service.duration}
             </span>
           </div>
         </motion.div>

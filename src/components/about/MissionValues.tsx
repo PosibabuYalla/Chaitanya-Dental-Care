@@ -18,7 +18,7 @@ export default function MissionValues() {
             transition={{ duration: 0.6 }}
             className="flex flex-col gap-4"
           >
-            <span className="glass-pill inline-flex w-fit items-center gap-2 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold-deep">
+            <span className="glass-pill inline-flex w-fit items-center gap-2 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-coral-deep">
               Our Mission
             </span>
             <h2 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -47,7 +47,7 @@ export default function MissionValues() {
             {valueItems.map((v) => (
               <motion.div key={v.title} variants={staggerItem} className="glass glass-highlight flex items-start gap-4 p-6">
                 <div className="h-14 w-14 shrink-0">
-                  <ClayVisual size="md" variant={v.variant} tone="gold" scale={0.85} />
+                  <ClayVisual size="md" variant={v.variant} tone="coral" scale={0.85} />
                 </div>
                 <div>
                   <h3 className="font-display text-base font-bold text-ink">{v.title}</h3>

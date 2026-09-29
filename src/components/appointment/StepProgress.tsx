@@ -21,7 +21,7 @@ export default function StepProgress({ step }: { step: number }) {
                   className={cn(
                     "h-0.5 flex-1 transition-colors",
                     i === 0 && "invisible",
-                    state === "upcoming" ? "bg-ink/10" : "bg-gold-deep/50",
+                    state === "upcoming" ? "bg-ink/10" : "bg-coral-deep/50",
                   )}
                 />
                 <motion.span
@@ -37,7 +37,7 @@ export default function StepProgress({ step }: { step: number }) {
                   className={cn(
                     "h-0.5 flex-1 transition-colors",
                     i === stepLabels.length - 1 && "invisible",
-                    i < step ? "bg-gold-deep/50" : "bg-ink/10",
+                    i < step ? "bg-coral-deep/50" : "bg-ink/10",
                   )}
                 />
               </div>

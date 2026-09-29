@@ -7,7 +7,7 @@ import SimpleCTA from "@/components/sections/SimpleCTA";
 export const metadata: Metadata = pageMetadata({
   title: "Clinic Gallery",
   description:
-    "Take a look inside Chaithanya Dental Hospital, Hyderabad — our treatment rooms, digital dental technology, our team and the confident smiles we help create.",
+    "Take a look inside Chaithanya Dental Hospital, Vijayawada — our treatment rooms, digital dental technology, our team and the confident smiles we help create.",
   path: "/gallery",
 });
 
@@ -20,7 +20,7 @@ export default function GalleryPage() {
         title="See These Results in Person"
         description="Book a consultation and start your own transformation story."
         variant="crown"
-        tone="gold"
+        tone="coral"
       />
     </div>
   );

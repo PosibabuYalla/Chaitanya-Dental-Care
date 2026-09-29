@@ -13,9 +13,12 @@
   --color-sky-soft: #a8d8f0;
   --color-sky-deep: #1a8fc4;
 
-  --color-gold: #38b6e8;
-  --color-gold-soft: #a8d8f0;
-  --color-gold-deep: #1a8fc4;
+  /* Accent — vivid brand orange (from the logo) paired with the sky primary (≈10% of the UI).
+     Fills take ink text (5.4:1); coral-deep is the text/icon shade (4.9:1 on the page). */
+  --color-coral: #ff7a00;
+  --color-coral-strong: #ff5a00;
+  --color-coral-soft: #ffd9b3;
+  --color-coral-deep: #b84300;
 
   --color-lavender: #cce9f7;
   --color-lavender-soft: #e0f2fb;
@@ -134,6 +137,8 @@ body::before {
     radial-gradient(38vmax 38vmax at 8% 12%, rgba(56, 182, 232, 0.32), transparent 62%),
     radial-gradient(34vmax 34vmax at 92% 28%, rgba(124, 200, 239, 0.36), transparent 62%),
     radial-gradient(30vmax 30vmax at 70% 88%, rgba(26, 143, 196, 0.22), transparent 62%),
+    radial-gradient(26vmax 26vmax at 96% 72%, rgba(255, 122, 0, 0.3), transparent 62%),
+    radial-gradient(22vmax 22vmax at 30% 42%, rgba(255, 122, 0, 0.18), transparent 62%),
     radial-gradient(28vmax 28vmax at 18% 80%, rgba(168, 216, 240, 0.4), transparent 62%),
     linear-gradient(180deg, #e8f4fb 0%, #f0f8fd 40%, #daeef8 100%);
 }
@@ -245,8 +250,8 @@ body::before {
     z-index: 1;
   }
 
-  .text-gradient-gold {
-    background: linear-gradient(120deg, var(--color-sky-deep), var(--color-sky));
+  .text-gradient-coral {
+    background: linear-gradient(120deg, var(--color-coral-deep), var(--color-coral-strong) 45%, var(--color-coral));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

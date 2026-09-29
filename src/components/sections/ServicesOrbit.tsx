@@ -222,7 +222,7 @@ export default function ServicesOrbit() {
             Under One Roof
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
-            From preventive care to advanced treatments, Chaithanya Dental Hospital offers comprehensive dental treatment in Hyderabad for all age groups.
+            From preventive care to advanced treatments, Chaithanya Dental Hospital offers comprehensive dental treatment in Vijayawada for all age groups.
           </p>
         </RevealOnScroll>
 
@@ -255,29 +255,9 @@ export default function ServicesOrbit() {
             </div>
 
             {/* Canvas */}
-            <div className="relative h-[340px] w-full sm:h-[500px]">
+            <div className="relative h-[380px] w-full sm:h-[520px] lg:h-[560px]">
               <LazyServicesCanvas />
             </div>
-
-            {/* Plus hotspots */}
-            {[
-              { top: "28%", left: "38%" },
-              { top: "42%", left: "58%" },
-              { top: "60%", left: "32%" },
-              { top: "65%", left: "62%" },
-              { top: "50%", left: "48%" },
-            ].map((pos, i) => (
-              <motion.div
-                key={i}
-                aria-hidden
-                className="pointer-events-none absolute flex h-6 w-6 items-center justify-center rounded-full bg-sky text-white shadow-lg shadow-sky/40"
-                style={{ top: pos.top, left: pos.left }}
-                animate={{ scale: [1, 1.25, 1] }}
-                transition={{ duration: 2, delay: i * 0.4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <span className="text-xs font-bold leading-none">+</span>
-              </motion.div>
-            ))}
 
             {/* Signature + CTA sit below the model so they never cover its base */}
             <div className="relative flex w-full items-end justify-between px-4 sm:px-6">

@@ -47,7 +47,7 @@ export default function ClayStat({
 }) {
   return (
     <div className="glass glass-highlight flex flex-col items-center gap-3 px-6 py-8 text-center">
-      <ClayIcon variant={variant} tone="gold" />
+      <ClayIcon variant={variant} tone="coral" />
       <p className="font-display text-3xl font-extrabold text-ink sm:text-4xl">
         <AnimatedNumber value={value} />
       </p>

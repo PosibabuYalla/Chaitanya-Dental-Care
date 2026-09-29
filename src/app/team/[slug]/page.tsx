@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!doctor) return {};
   return pageMetadata({
     title: `${doctor.name}, ${doctor.specialty}`,
-    description: `${doctor.name}, ${doctor.specialty} at Chaithanya Dental Hospital, Hyderabad. ${doctor.bio}`,
+    description: `${doctor.name}, ${doctor.specialty} at Chaithanya Dental Hospital, Vijayawada. ${doctor.bio}`,
     path: `/team/${doctor.slug}`,
     type: "profile",
   });
@@ -77,16 +77,16 @@ export default async function DoctorDetailPage({ params }: { params: Promise<{ s
               <DoctorPortrait initials={doctor.initials} tone={doctor.tone} className="max-w-sm" />
               <div className="glass p-6">
                 <h1 className="font-display text-2xl font-bold text-ink">{doctor.name}</h1>
-                <p className="mt-1 text-sm font-semibold text-gold-deep">{doctor.specialty}</p>
+                <p className="mt-1 text-sm font-semibold text-coral-deep">{doctor.specialty}</p>
                 <div className="mt-4 flex flex-col gap-3 text-sm text-ink-soft">
                   <span className="flex items-center gap-2">
-                    <LuStethoscope className="h-4 w-4 text-gold-deep" /> {doctor.experienceYears}+ years experience
+                    <LuStethoscope className="h-4 w-4 text-coral-deep" /> {doctor.experienceYears}+ years experience
                   </span>
                   <span className="flex items-center gap-2">
-                    <LuGraduationCap className="h-4 w-4 text-gold-deep" /> {doctor.qualifications.join(", ")}
+                    <LuGraduationCap className="h-4 w-4 text-coral-deep" /> {doctor.qualifications.join(", ")}
                   </span>
                   <span className="flex items-center gap-2">
-                    <LuLanguages className="h-4 w-4 text-gold-deep" /> {doctor.languages.join(", ")}
+                    <LuLanguages className="h-4 w-4 text-coral-deep" /> {doctor.languages.join(", ")}
                   </span>
                 </div>
                 <div className="mt-5">

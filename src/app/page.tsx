@@ -14,10 +14,10 @@ import BlogPreview from "@/components/sections/BlogPreview";
 import AppointmentCTA from "@/components/sections/AppointmentCTA";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Chaithanya Dental Hospital – Dentist in Banjara Hills, Hyderabad",
+  title: "Chaithanya Dental Hospital – Dentist in Tadigadapa, Vijayawada",
   absoluteTitle: true,
   description:
-    "Chaithanya Dental Hospital in Banjara Hills, Hyderabad offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
+    "Chaithanya Dental Hospital in Tadigadapa, Vijayawada offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
   path: "/",
 });
 

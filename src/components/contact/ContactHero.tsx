@@ -3,11 +3,12 @@
 import { motion } from "motion/react";
 import ClayContainer from "@/components/ui/ClayContainer";
 import { SectionKicker } from "@/components/ui/ClaySection";
-import ClayVisual from "@/components/three/ClayVisual";
+import HeroPhoto from "@/components/ui/HeroPhoto";
+import receptionPhoto from "@/components/gallery/Contact page.webp";
 
 export default function ContactHero() {
   return (
-    <section className="relative isolate overflow-hidden pb-2 pt-28 sm:pb-4 sm:pt-36">
+    <section className="relative isolate overflow-hidden pb-8 pt-28 sm:pb-4 sm:pt-36">
       <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-pink/25 blur-3xl" />
       <ClayContainer className="relative grid items-center gap-10 lg:grid-cols-2">
         <motion.div
@@ -26,14 +27,7 @@ export default function ContactHero() {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative h-52 sm:h-72"
-        >
-          <ClayVisual variant="pin" tone="pink" scale={1.6} />
-        </motion.div>
+        <HeroPhoto src={receptionPhoto} alt="Our front desk team helping a patient book an appointment" className="object-[50%_45%]" />
       </ClayContainer>
     </section>
   );

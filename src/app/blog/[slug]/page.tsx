@@ -91,13 +91,13 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
             </h1>
             <div className="flex flex-wrap items-center gap-5 text-sm text-ink-soft">
               <span className="flex items-center gap-1.5">
-                <LuUser className="h-4 w-4 text-gold-deep" /> {post.author}
+                <LuUser className="h-4 w-4 text-coral-deep" /> {post.author}
               </span>
               <span className="flex items-center gap-1.5">
-                <LuCalendarDays className="h-4 w-4 text-gold-deep" /> {formattedDate}
+                <LuCalendarDays className="h-4 w-4 text-coral-deep" /> {formattedDate}
               </span>
               <span className="flex items-center gap-1.5">
-                <LuClock className="h-4 w-4 text-gold-deep" /> {post.readTime}
+                <LuClock className="h-4 w-4 text-coral-deep" /> {post.readTime}
               </span>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                 <ul key={i} className="mt-4 flex flex-col gap-2.5">
                   {block.items?.map((item) => (
                     <li key={item} className="glass-sm flex items-start gap-3 px-4 py-3 text-sm text-ink-soft">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-deep" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-coral-deep" />
                       {item}
                     </li>
                   ))}
@@ -148,7 +148,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                   </div>
                   <div>
                     <h3 className="font-display text-sm font-bold leading-snug text-ink">{r.title}</h3>
-                    <span className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-gold-deep transition-transform group-hover:translate-x-1">
+                    <span className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-coral-deep transition-transform group-hover:translate-x-1">
                       Read More <LuArrowRight className="h-3 w-3" />
                     </span>
                   </div>

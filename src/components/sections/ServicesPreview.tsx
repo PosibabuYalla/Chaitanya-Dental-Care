@@ -43,7 +43,7 @@ export default function ServicesPreview() {
                 </div>
                 <h3 className="font-display text-xl font-bold text-ink">{service.name}</h3>
                 <p className="text-sm leading-relaxed text-ink-soft">{service.tagline}</p>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-gold-deep transition-transform group-hover:translate-x-1">
+                <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-coral-deep transition-transform group-hover:translate-x-1">
                   Learn more <LuArrowRight className="h-3.5 w-3.5" />
                 </span>
               </motion.div>

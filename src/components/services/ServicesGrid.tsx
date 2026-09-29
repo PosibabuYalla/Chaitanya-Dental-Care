@@ -29,7 +29,7 @@ export default function ServicesGrid() {
                   <span className="flex items-center gap-1.5 text-xs text-ink-faint">
                     <LuClock className="h-3.5 w-3.5" /> {service.duration}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-gold-deep transition-transform group-hover:translate-x-1">
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-coral-deep transition-transform group-hover:translate-x-1">
                     Details <LuArrowRight className="h-3.5 w-3.5" />
                   </span>
                 </div>

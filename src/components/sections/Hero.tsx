@@ -115,7 +115,7 @@ export default function Hero() {
           className="flex flex-col items-start gap-5 sm:gap-6 lg:w-[40%]"
         >
           <span className="inline-flex items-center glass-pill px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-sky-deep backdrop-blur-sm">
-            <span className="hidden sm:inline">Dental Hospital · </span>Banjara Hills, Hyderabad
+            <span className="hidden sm:inline">Dental Hospital · </span>Tadigadapa, Vijayawada
           </span>
 
           <h1 className="font-display text-[2.35rem] font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
@@ -126,7 +126,7 @@ export default function Hero() {
             <span className="relative inline-block text-ink">
               You
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 120 12" fill="none">
-                <path d="M4 8 Q60 2 116 8" stroke="#38b6e8" strokeWidth="3" strokeLinecap="round" fill="none" />
+                <path d="M4 8 Q60 2 116 8" stroke="#ff7a00" strokeWidth="3.5" strokeLinecap="round" fill="none" />
               </svg>
             </span>
           </h1>
@@ -138,7 +138,7 @@ export default function Hero() {
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <Link
               href="/appointment"
-              className="flex items-center justify-center gap-2 rounded-full bg-sky px-7 py-3.5 font-display text-sm font-bold text-white shadow-lg shadow-sky/30 transition-all hover:bg-sky-deep"
+              className="flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-sm font-bold transition-all bg-gradient-to-r from-coral to-coral-strong text-ink shadow-lg shadow-coral/50 hover:shadow-xl hover:shadow-coral/70 hover:brightness-110"
             >
               <LuCalendarDays className="h-4 w-4" />
               Book Your Visit

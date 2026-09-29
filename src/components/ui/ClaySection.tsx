@@ -5,7 +5,7 @@ import RevealOnScroll from "./RevealOnScroll";
 
 export function SectionKicker({ children }: { children: ReactNode }) {
   return (
-    <span className="glass-pill inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold-deep">
+    <span className="glass-pill inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-coral-deep">
       {children}
     </span>
   );

@@ -10,7 +10,7 @@ import SimpleCTA from "@/components/sections/SimpleCTA";
 export const metadata: Metadata = pageMetadata({
   title: "About Our Dental Hospital",
   description:
-    "Since 2011, Chaithanya Dental Hospital in Banjara Hills, Hyderabad has grown into a multi-specialty dental practice built on precision, comfort and compassion.",
+    "Since 2011, Chaithanya Dental Hospital in Tadigadapa, Vijayawada has grown into a multi-specialty dental practice built on precision, comfort and compassion.",
   path: "/about",
 });
 

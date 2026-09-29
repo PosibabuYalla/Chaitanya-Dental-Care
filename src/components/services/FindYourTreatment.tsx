@@ -56,7 +56,7 @@ export default function FindYourTreatment() {
               transition={{ duration: 0.4 }}
               className="glass-inset mx-auto mt-8 flex max-w-md flex-col items-center gap-4 p-6 text-center"
             >
-              <span className="glass-pill inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-gold-deep">
+              <span className="glass-pill inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-coral-deep">
                 <LuSparkles className="h-3.5 w-3.5" /> Recommended
               </span>
               <div className="h-20 w-20">

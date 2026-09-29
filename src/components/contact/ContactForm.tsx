@@ -89,7 +89,7 @@ export default function ContactForm() {
                   setValues(initialState);
                 }}
                 data-cursor-hover
-                className="text-sm font-semibold text-gold-deep underline-offset-4 hover:underline"
+                className="text-sm font-semibold text-coral-deep underline-offset-4 hover:underline"
               >
                 Submit another request
               </button>
@@ -134,7 +134,7 @@ export default function ContactForm() {
                 </ClayButton>
               </div>
               <p className="flex items-center gap-1.5 text-xs text-ink-faint sm:col-span-2">
-                <LuCircleCheck className="h-3.5 w-3.5 text-gold-deep" /> We&rsquo;ll confirm by phone or email —
+                <LuCircleCheck className="h-3.5 w-3.5 text-coral-deep" /> We&rsquo;ll confirm by phone or email —
                 no payment required to request.
               </p>
             </motion.form>

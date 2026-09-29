@@ -8,6 +8,7 @@ import ClayContainer from "@/components/ui/ClayContainer";
 import ClayVisual from "@/components/three/ClayVisual";
 import ClayBadge from "@/components/ui/ClayBadge";
 import ClayModal from "@/components/ui/ClayModal";
+import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
 import { ClayIcon } from "@/components/ui/ClayIcon";
 import { galleryItems, galleryCategories } from "@/lib/data/gallery";
 import { cn } from "@/lib/utils";
@@ -16,13 +17,15 @@ const spanClasses: Record<string, string> = {
   tall: "sm:row-span-2",
   wide: "sm:col-span-2",
   square: "",
+  large: "col-span-2 row-span-2",
 };
 
 export default function GalleryMasonry() {
   const [category, setCategory] = useState("All");
   const [active, setActive] = useState<(typeof galleryItems)[number] | null>(null);
 
-  const filtered = category === "All" ? galleryItems : galleryItems.filter((g) => g.category === category);
+  const filtered =
+    category === "All" ? galleryItems.filter((g) => !g.comingSoon) : galleryItems.filter((g) => g.category === category);
 
   return (
     <ClayContainer className="pb-24">
@@ -45,7 +48,29 @@ export default function GalleryMasonry() {
       <LayoutGroup>
         <motion.div layout className="grid auto-rows-[220px] grid-flow-row-dense grid-cols-2 gap-4 sm:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {filtered.map((item) => (
+            {filtered.map((item) =>
+              item.comparison ? (
+                // Dragging is the interaction here, so this tile isn't a lightbox button.
+                <motion.div
+                  key={item.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  className={cn("glass glass-highlight relative flex flex-col p-3 sm:p-4", spanClasses[item.span])}
+                >
+                  <ClayBadge tone={item.tone} className="absolute left-6 top-6 z-10 sm:left-7 sm:top-7">
+                    {item.category}
+                  </ClayBadge>
+                  <BeforeAfterSlider
+                    before={item.comparison.before}
+                    after={item.comparison.after}
+                    sizes="(min-width: 640px) 66vw, 100vw"
+                    className="min-h-0 flex-1"
+                    frameClassName="min-h-0 flex-1"
+                  />
+                </motion.div>
+              ) : (
               <motion.button
                 key={item.id}
                 layout
@@ -89,7 +114,8 @@ export default function GalleryMasonry() {
                   </>
                 )}
               </motion.button>
-            ))}
+              ),
+            )}
           </AnimatePresence>
         </motion.div>
       </LayoutGroup>

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 const toneClasses: Record<ClayTone, string> = {
   pink: "from-sky-soft/50 via-white/30 to-pink-deep/30",
   sky: "from-sky-soft/50 via-white/30 to-sky/35",
-  gold: "from-sky/35 via-white/25 to-sky-deep/35",
+  coral: "from-coral-soft/70 via-white/30 to-coral/40",
   ivory: "from-white/60 via-white/30 to-sky-soft/40",
   lavender: "from-lavender/50 via-white/30 to-lavender-deep/35",
 };

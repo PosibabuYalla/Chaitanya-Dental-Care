@@ -39,7 +39,7 @@ export default function TeamGrid() {
                           <span className="flex items-center gap-1.5">
                             <LuGraduationCap className="h-3.5 w-3.5" /> {doctor.experienceYears}+ yrs
                           </span>
-                          <span className="inline-flex items-center gap-1 font-semibold text-gold-deep opacity-0 transition-opacity group-hover:opacity-100">
+                          <span className="inline-flex items-center gap-1 font-semibold text-coral-deep opacity-0 transition-opacity group-hover:opacity-100">
                             Profile <LuArrowRight className="h-3 w-3" />
                           </span>
                         </div>

@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-22",
     readTime: "7 min read",
     variant: "implant",
-    tone: "gold",
+    tone: "coral",
     content: [
       { type: "paragraph", text: "Losing a tooth affects more than appearance — it changes how you chew, how neighbouring teeth shift, and over time, how much bone remains in your jaw. Three main options exist, each with real trade-offs." },
       { type: "heading", text: "Dental implants" },

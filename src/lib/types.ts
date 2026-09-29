@@ -22,7 +22,7 @@ export type ClayVariant =
   | "heart"
   | "whitening";
 
-export type ClayTone = "pink" | "sky" | "gold" | "ivory" | "lavender";
+export type ClayTone = "pink" | "sky" | "coral" | "ivory" | "lavender";
 
 export interface FaqItem {
   question: string;
@@ -98,9 +98,18 @@ export interface GalleryItem {
   caption: string;
   tone: ClayTone;
   variant: ClayVariant;
-  span: "tall" | "wide" | "square";
+  span: "tall" | "wide" | "square" | "large";
   /** Real photo; when absent the tile falls back to its clay illustration. */
   image?: StaticImageData;
+  /** Before/after pair; the tile renders a drag-to-compare slider instead of a photo. */
+  comparison?: BeforeAfterPair;
+  /** Empty slot reserved for a future photo; only shown when its category is selected. */
+  comingSoon?: boolean;
+}
+
+export interface BeforeAfterPair {
+  before: StaticImageData;
+  after: StaticImageData;
 }
 
 export interface JourneyStep {

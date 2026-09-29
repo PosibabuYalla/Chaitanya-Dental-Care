@@ -13,7 +13,7 @@ export default function SimpleCTA({
   ctaLabel = "Book Your Appointment",
   ctaHref = "/appointment",
   variant = "sparkle",
-  tone = "gold",
+  tone = "coral",
 }: {
   title: string;
   description?: string;

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/data/site";
 
 // Default social-share card for every page (1200×630), in the hero's palette.
-export const alt = `${siteConfig.name} — dental hospital in Banjara Hills, Hyderabad`;
+export const alt = `${siteConfig.name} — dental hospital in Tadigadapa, Vijayawada`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -34,7 +34,7 @@ export default function OpengraphImage() {
             letterSpacing: 4,
           }}
         >
-          BANJARA HILLS · HYDERABAD
+          TADIGADAPA · VIJAYAWADA
         </div>
         <div style={{ display: "flex", marginTop: 36, fontSize: 84, fontWeight: 800, color: "#0d2d3f", lineHeight: 1.05 }}>
           {siteConfig.name}

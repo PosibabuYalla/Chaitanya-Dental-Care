@@ -35,7 +35,7 @@ export const testimonials: Testimonial[] = [
     treatment: "Cosmetic Dentistry",
     rating: 5,
     quote: "The smile design preview sold me before we even started. Seeing the mock-up first meant zero surprises — the final veneers look exactly like my own teeth, just better.",
-    tone: "gold",
+    tone: "coral",
   },
   {
     id: "t5",

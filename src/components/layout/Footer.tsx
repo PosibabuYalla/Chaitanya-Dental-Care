@@ -33,7 +33,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label={label}
                 data-cursor-hover
-                className="glass-pill flex h-10 w-10 items-center justify-center text-ink-soft transition-colors hover:text-gold-deep"
+                className="glass-pill flex h-10 w-10 items-center justify-center text-ink-soft transition-colors hover:text-coral-deep"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -75,19 +75,19 @@ export default function Footer() {
           <h3 className="font-display text-sm font-bold uppercase tracking-wide text-ink">Visit Us</h3>
           <address className="flex flex-col gap-4 not-italic">
           <p className="flex items-start gap-2.5 text-sm text-ink-soft">
-            <LuMapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-deep" /> {siteConfig.address}
+            <LuMapPin className="mt-0.5 h-4 w-4 shrink-0 text-coral-deep" /> {siteConfig.address}
           </p>
           <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="flex items-center gap-2.5 text-sm text-ink-soft hover:text-ink" data-cursor-hover>
-            <LuPhone className="h-4 w-4 shrink-0 text-gold-deep" /> {siteConfig.phone}
+            <LuPhone className="h-4 w-4 shrink-0 text-coral-deep" /> {siteConfig.phone}
           </a>
           <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2.5 text-sm text-ink-soft hover:text-ink" data-cursor-hover>
-            <LuMail className="h-4 w-4 shrink-0 text-gold-deep" /> {siteConfig.email}
+            <LuMail className="h-4 w-4 shrink-0 text-coral-deep" /> {siteConfig.email}
           </a>
           </address>
           <div className="flex flex-col gap-1.5">
             {siteConfig.hours.map((h) => (
               <p key={h.day} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                <LuClock className="mt-0.5 h-4 w-4 shrink-0 text-gold-deep" />
+                <LuClock className="mt-0.5 h-4 w-4 shrink-0 text-coral-deep" />
                 <span>
                   {h.day}: {h.time}
                 </span>
@@ -115,6 +115,18 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 border-t border-ink/10 pt-6 text-xs text-ink-faint sm:flex-row">
         <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
         <p>Emergency line: <span className="whitespace-nowrap">{siteConfig.emergencyPhone}</span> · Available 24/7</p>
+        <p>
+          Designed and Developed by{" "}
+          <a
+            href="https://sabariyatech.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor-hover
+            className="font-semibold text-coral-deep decoration-coral-deep/50 underline-offset-2 transition-colors hover:underline"
+          >
+            SabariyaTech
+          </a>
+        </p>
         </div>
       </ClayContainer>
     </footer>

@@ -53,7 +53,7 @@ export const services: Service[] = [
     description:
       "Custom-crafted ceramic and zirconia crowns and bridges that rebuild damaged or missing teeth with a precise, natural fit.",
     variant: "crown",
-    tone: "gold",
+    tone: "coral",
     duration: "2 visits, 1–2 weeks apart",
     symptoms: ["Cracked or heavily filled tooth", "Worn-down or misshapen teeth", "Gap from one missing tooth", "Discoloured old restoration"],
     process: [
@@ -141,7 +141,7 @@ export const services: Service[] = [
     description:
       "Professional-grade, dentist-supervised whitening that lifts years of staining in a single visit, or gradually with take-home trays.",
     variant: "whitening",
-    tone: "gold",
+    tone: "coral",
     duration: "60–90 minutes in-clinic",
     symptoms: ["Coffee, tea, or wine staining", "Yellowing with age", "Uneven shade across teeth", "Wanting a brighter smile for an event"],
     process: [
@@ -251,7 +251,7 @@ export const services: Service[] = [
     description:
       "Same-day emergency appointments for sudden pain, trauma, or breakages — with a dedicated line for after-hours urgent care.",
     variant: "cross",
-    tone: "gold",
+    tone: "coral",
     duration: "Same-day priority slots",
     symptoms: ["Sudden, severe tooth pain", "Knocked-out or broken tooth", "Lost filling or crown", "Facial swelling with pain"],
     process: [

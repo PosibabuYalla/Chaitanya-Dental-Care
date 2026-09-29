@@ -1,5 +1,5 @@
 export const timeline = [
-  { year: "2011", title: "Founded", description: "Dr. Ananya Rao opens a single-chair clinic in Banjara Hills with a simple promise: comfort first." },
+  { year: "2011", title: "Founded", description: "Dr. Ananya Rao opens a single-chair clinic in Tadigadapa with a simple promise: comfort first." },
   { year: "2014", title: "First Expansion", description: "A second treatment suite and our first in-house digital X-ray unit are added." },
   { year: "2017", title: "Specialist Team Formed", description: "Orthodontic, pediatric, and cosmetic specialists join, forming a true multi-specialty practice." },
   { year: "2020", title: "Digital Transformation", description: "Full adoption of intraoral scanning, CAD/CAM crowns, and 3D implant planning." },
@@ -17,7 +17,7 @@ export const certifications = [
 export const clinicRooms = [
   { name: "Reception", description: "A calm, clay-toned lounge where your visit begins.", variant: "building" as const, tone: "pink" as const },
   { name: "Consultation", description: "One-on-one conversations about your goals and concerns.", variant: "mirror" as const, tone: "sky" as const },
-  { name: "Treatment Suites", description: "Six fully equipped operatories with the latest technology.", variant: "chair" as const, tone: "gold" as const },
+  { name: "Treatment Suites", description: "Six fully equipped operatories with the latest technology.", variant: "chair" as const, tone: "coral" as const },
   { name: "Sterilisation Centre", description: "Hospital-grade sterilisation exceeding standard clinical protocol.", variant: "shield" as const, tone: "lavender" as const },
   { name: "Recovery Lounge", description: "A quiet space to rest after surgical procedures.", variant: "heart" as const, tone: "pink" as const },
 ];

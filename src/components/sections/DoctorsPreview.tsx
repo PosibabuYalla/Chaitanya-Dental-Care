@@ -33,7 +33,7 @@ export default function DoctorsPreview() {
                 <div className="text-center">
                   <h3 className="font-display text-base font-bold text-ink">{doctor.name}</h3>
                   <p className="text-xs font-medium text-ink-soft">{doctor.specialty}</p>
-                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-gold-deep opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-coral-deep opacity-0 transition-opacity group-hover:opacity-100">
                     View profile <LuArrowRight className="h-3 w-3" />
                   </span>
                 </div>

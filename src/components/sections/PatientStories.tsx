@@ -13,7 +13,7 @@ const SECONDS_PER_CARD = 7;
 function ReviewCard({ t }: { t: Testimonial }) {
   return (
     <div className="glass glass-highlight relative w-[300px] shrink-0 p-6 sm:w-[340px] sm:p-7">
-      <LuQuote className="h-7 w-7 text-gold/50" />
+      <LuQuote className="h-7 w-7 text-coral/50" />
       <p className="mt-3 text-sm leading-relaxed text-ink-soft">&ldquo;{t.quote}&rdquo;</p>
       <div className="mt-5 flex items-center gap-3">
         <span className="glass-pill flex h-11 w-11 shrink-0 items-center justify-center glass-tint font-display text-sm font-bold text-ink">
@@ -25,7 +25,7 @@ function ReviewCard({ t }: { t: Testimonial }) {
         </div>
         <div className="ml-auto flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
           {Array.from({ length: t.rating }).map((_, i) => (
-            <LuStar key={i} className="h-3.5 w-3.5 fill-gold-deep text-gold-deep" aria-hidden />
+            <LuStar key={i} className="h-3.5 w-3.5 fill-coral text-coral-deep" aria-hidden />
           ))}
         </div>
       </div>

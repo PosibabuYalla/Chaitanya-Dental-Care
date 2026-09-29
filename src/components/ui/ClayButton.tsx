@@ -20,7 +20,7 @@ interface ClayButtonProps {
 
 const variantClasses = {
   primary:
-    "bg-sky text-white shadow-lg shadow-sky/30 hover:bg-sky-deep",
+    "bg-gradient-to-r from-coral to-coral-strong text-ink shadow-lg shadow-coral/50 hover:shadow-xl hover:shadow-coral/70 hover:brightness-110",
   secondary:
     "glass-pill text-sky-deep hover:bg-white/70",
   ghost: "glass-pill text-ink hover:bg-white/70",

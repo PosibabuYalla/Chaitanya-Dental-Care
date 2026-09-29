@@ -105,7 +105,7 @@ export default function AppointmentWizard() {
                       data-cursor-hover
                       className={cn(
                         "glass-sm flex items-center gap-3 p-4 text-left transition-shadow",
-                        data.treatmentSlug === s.slug && "shadow-glass-pressed ring-2 ring-gold-deep/50",
+                        data.treatmentSlug === s.slug && "shadow-glass-pressed ring-2 ring-coral-deep/50",
                       )}
                     >
                       <div className="h-12 w-12 shrink-0">
@@ -129,7 +129,7 @@ export default function AppointmentWizard() {
                     data-cursor-hover
                     className={cn(
                       "glass-sm flex items-center gap-3 p-4 text-left",
-                      data.doctorSlug === "any" && "shadow-glass-pressed ring-2 ring-gold-deep/50",
+                      data.doctorSlug === "any" && "shadow-glass-pressed ring-2 ring-coral-deep/50",
                     )}
                   >
                     <span className="glass-pill flex h-12 w-12 shrink-0 items-center justify-center bg-sky bg-none text-white shadow-md shadow-sky/30">
@@ -147,7 +147,7 @@ export default function AppointmentWizard() {
                       data-cursor-hover
                       className={cn(
                         "glass-sm flex items-center gap-3 p-4 text-left",
-                        data.doctorSlug === doc.slug && "shadow-glass-pressed ring-2 ring-gold-deep/50",
+                        data.doctorSlug === doc.slug && "shadow-glass-pressed ring-2 ring-coral-deep/50",
                       )}
                     >
                       <span className="glass-pill flex h-12 w-12 shrink-0 items-center justify-center glass-tint font-display text-xs font-bold text-ink">

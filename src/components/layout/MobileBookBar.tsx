@@ -19,7 +19,7 @@ export default function MobileBookBar() {
       </a>
       <Link
         href="/appointment"
-        className="flex flex-1 items-center justify-center gap-2 rounded-full bg-sky py-3 text-sm font-bold text-white shadow-lg shadow-sky/30"
+        className="flex flex-1 items-center justify-center gap-2 rounded-full py-3 text-sm font-bold bg-gradient-to-r from-coral to-coral-strong text-ink shadow-lg shadow-coral/50 hover:shadow-xl hover:shadow-coral/70 hover:brightness-110"
       >
         <LuCalendarPlus className="h-4 w-4" /> Book Appointment
       </Link>

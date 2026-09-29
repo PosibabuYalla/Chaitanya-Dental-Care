@@ -26,7 +26,7 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return pageMetadata({
-    title: `${service.name} in Hyderabad`,
+    title: `${service.name} in Vijayawada`,
     description: service.description,
     path: `/services/${service.slug}`,
   });

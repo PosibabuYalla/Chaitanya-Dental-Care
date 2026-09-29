@@ -5,20 +5,22 @@ export const siteConfig = {
   shortName: "Chaithanya Dental",
   tagline: "Your Smile. Our Expertise.",
   description: "Advanced dental care delivered with precision, comfort, and compassion.",
-  phone: "+91 98765 43210",
+  phone: "+91 86397 99150",
   emergencyPhone: "+91 98765 00000",
   email: "care@chaithanyadental.example",
-  address: "142 Lakeview Boulevard, Banjara Hills, Hyderabad, Telangana 500034",
+  address: "1st and 3rd Floor, Center, Panchumarthi Complex, Tadigadapa, Poranki, Andhra Pradesh 521137",
   addressParts: {
-    street: "142 Lakeview Boulevard, Banjara Hills",
-    locality: "Hyderabad",
-    region: "Telangana",
-    postalCode: "500034",
+    street: "1st and 3rd Floor, Center, Panchumarthi Complex, Tadigadapa",
+    locality: "Poranki",
+    /** Nearest city, used where a short location label reads better than the full address. */
+    city: "Vijayawada",
+    region: "Andhra Pradesh",
+    postalCode: "521137",
     country: "IN",
   },
   /** Used for meta descriptions and structured data. */
   seoDescription:
-    "Chaithanya Dental Hospital in Banjara Hills, Hyderabad offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
+    "Chaithanya Dental Hospital in Tadigadapa, Vijayawada offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
   hours: [
     { day: "Monday – Saturday", time: "9:00 AM – 8:00 PM" },
     { day: "Sunday", time: "10:00 AM – 2:00 PM (Emergencies only)" },
