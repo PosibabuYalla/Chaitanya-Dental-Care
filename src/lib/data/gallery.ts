@@ -1,6 +1,21 @@
 import type { GalleryItem } from "@/lib/types";
+import clinicFront from "@/components/gallery/Chaitanya Dental Care.webp";
+import reception from "@/components/gallery/Reception.webp";
+import drChaitanya from "@/components/gallery/Dr. Chaitanya.webp";
+import dentalRoom from "@/components/gallery/Dental Room.webp";
+import toothMachine from "@/components/gallery/Tooth MACHINE.webp";
+import beforeTeeth from "@/components/gallery/Before Teeth.webp";
+import afterTeeth from "@/components/gallery/After Teeth.webp";
 
 export const galleryItems: GalleryItem[] = [
+  // Demo photos — listed first so they also lead the homepage preview.
+  { id: "p1", category: "Clinic", caption: "Chaitanya Dental Care", tone: "sky", variant: "building", span: "wide", image: clinicFront },
+  { id: "p2", category: "Doctors", caption: "Dr. Chaitanya", tone: "gold", variant: "cross", span: "tall", image: drChaitanya },
+  { id: "p3", category: "Clinic", caption: "Reception & waiting lounge", tone: "pink", variant: "building", span: "square", image: reception },
+  { id: "p4", category: "Treatment Rooms", caption: "Dental treatment room", tone: "sky", variant: "implant", span: "square", image: dentalRoom },
+  { id: "p5", category: "Technology", caption: "Advanced dental equipment", tone: "lavender", variant: "scanner", span: "tall", image: toothMachine },
+  { id: "p6", category: "Before & After", caption: "Smile before treatment", tone: "gold", variant: "crown", span: "square", image: beforeTeeth },
+  { id: "p7", category: "Before & After", caption: "Smile after treatment", tone: "pink", variant: "sparkle", span: "square", image: afterTeeth },
   { id: "g1", category: "Clinic", caption: "Reception & waiting lounge", tone: "pink", variant: "building", span: "wide" },
   { id: "g2", category: "Technology", caption: "3D imaging suite", tone: "sky", variant: "scanner", span: "tall" },
   { id: "g3", category: "Doctors", caption: "Dr. Ananya Rao in consultation", tone: "gold", variant: "cross", span: "square" },

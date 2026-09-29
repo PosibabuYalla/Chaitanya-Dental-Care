@@ -4,10 +4,11 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "motion/react";
 import {
-  LuArrowRight, LuShield, LuGem, LuUsers, LuHeart,
+  LuArrowRight, LuShield, LuGem, LuUsers, LuHeart, LuMove3D,
 } from "react-icons/lu";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import { useInViewport } from "@/hooks/useInViewport";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const ServicesGLBCanvas = dynamic(() => import("@/components/three/ServicesGLBCanvas"), {
   ssr: false,
@@ -191,9 +192,10 @@ function ServiceCard({
 // Don't download three.js or the model until the section is about to scroll in.
 function LazyServicesCanvas() {
   const { ref, inView } = useInViewport<HTMLDivElement>({ rootMargin: "400px", once: true });
+  const isStatic = usePrefersReducedMotion();
   return (
     <div ref={ref} className="h-full w-full">
-      {inView && <ServicesGLBCanvas />}
+      {inView && <ServicesGLBCanvas isStatic={isStatic} />}
     </div>
   );
 }
@@ -245,6 +247,13 @@ export default function ServicesOrbit() {
             {/* Glow halo behind model */}
             <div className="absolute inset-0 rounded-full bg-sky/10 blur-3xl" />
 
+            {/* Drag hint (same as the hero viewer) */}
+            <div className="pointer-events-none absolute left-1/2 top-2 z-10 flex -translate-x-1/2 select-none items-center gap-1.5 text-xs font-semibold text-ink-soft/70">
+              <LuMove3D className="h-3.5 w-3.5" aria-hidden />
+              <span className="lg:hidden">Swipe</span>
+              <span className="hidden lg:inline">Drag</span> to Rotate
+            </div>
+
             {/* Canvas */}
             <div className="relative h-[340px] w-full sm:h-[500px]">
               <LazyServicesCanvas />
@@ -260,7 +269,8 @@ export default function ServicesOrbit() {
             ].map((pos, i) => (
               <motion.div
                 key={i}
-                className="absolute flex h-6 w-6 items-center justify-center rounded-full bg-sky text-white shadow-lg shadow-sky/40"
+                aria-hidden
+                className="pointer-events-none absolute flex h-6 w-6 items-center justify-center rounded-full bg-sky text-white shadow-lg shadow-sky/40"
                 style={{ top: pos.top, left: pos.left }}
                 animate={{ scale: [1, 1.25, 1] }}
                 transition={{ duration: 2, delay: i * 0.4, repeat: Infinity, ease: "easeInOut" }}
@@ -269,8 +279,10 @@ export default function ServicesOrbit() {
               </motion.div>
             ))}
 
+            {/* Signature + CTA sit below the model so they never cover its base */}
+            <div className="relative flex w-full items-end justify-between px-4 sm:px-6">
             {/* Care Beyond Teeth signature */}
-            <div className="absolute bottom-6 left-6">
+            <div className="pointer-events-none" aria-hidden>
               <svg viewBox="0 0 160 80" className="h-14 w-36" xmlns="http://www.w3.org/2000/svg">
                 <text x="10" y="28" fontFamily="Georgia, serif" fontSize="22" fontStyle="italic" fontWeight="bold" fill="#1a8fc4">Care</text>
                 <text x="10" y="52" fontFamily="Georgia, serif" fontSize="22" fontStyle="italic" fontWeight="bold" fill="#1a8fc4">Beyond</text>
@@ -281,7 +293,7 @@ export default function ServicesOrbit() {
             </div>
 
             {/* Explore CTA */}
-            <div className="absolute bottom-6 right-6 flex flex-col items-center gap-1">
+            <div className="flex flex-col items-center gap-1">
               <svg viewBox="0 0 40 40" className="h-10 w-10 text-sky-deep" fill="none">
                 <path d="M20 8 C14 8 10 13 10 18 C10 24 14 28 20 30 C26 28 30 24 30 18 C30 13 26 8 20 8Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
                 <path d="M16 22 L20 18 L24 22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -290,6 +302,7 @@ export default function ServicesOrbit() {
               <Link href="/services" className="text-center text-xs font-bold text-sky-deep hover:underline">
                 Explore<br />Our Treatments
               </Link>
+            </div>
             </div>
           </motion.div>
 

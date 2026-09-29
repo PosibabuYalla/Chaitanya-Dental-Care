@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image";
+
 export type ClayVariant =
   | "tooth"
   | "implant"
@@ -97,6 +99,8 @@ export interface GalleryItem {
   tone: ClayTone;
   variant: ClayVariant;
   span: "tall" | "wide" | "square";
+  /** Real photo; when absent the tile falls back to its clay illustration. */
+  image?: StaticImageData;
 }
 
 export interface JourneyStep {

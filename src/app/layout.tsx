@@ -51,6 +51,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en-IN" className={`${jakarta.variable} ${dmSans.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: entryPlayedScript }} />
+        {/* Without JS the intro can't run — never leave the page hidden */}
+        <noscript>
+          <style>{`.entry-content{opacity:1!important;pointer-events:auto!important}.entry-overlay{display:none!important}`}</style>
+        </noscript>
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
       <body className="flex min-h-full flex-col text-ink font-body">

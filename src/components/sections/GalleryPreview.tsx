@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { LuArrowRight } from "react-icons/lu";
 import ClaySection, { SectionHeading } from "@/components/ui/ClaySection";
@@ -34,10 +35,28 @@ export default function GalleryPreview() {
             <ClayBadge tone={item.tone} className="absolute left-3 top-3 z-10">
               {item.category}
             </ClayBadge>
-            <div className="h-16 w-16">
-              <ClayVisual size="md" variant={item.variant} tone={item.tone} scale={0.85} />
-            </div>
-            <p className="text-center text-xs font-medium text-ink-soft">{item.caption}</p>
+            {item.image ? (
+              <>
+                <Image
+                  src={item.image}
+                  alt={item.caption}
+                  fill
+                  placeholder="blur"
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+                <p className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-ink/70 to-transparent px-4 pb-3 pt-10 text-xs font-semibold text-white">
+                  {item.caption}
+                </p>
+              </>
+            ) : (
+              <>
+                <div className="h-16 w-16">
+                  <ClayVisual size="md" variant={item.variant} tone={item.tone} scale={0.85} />
+                </div>
+                <p className="text-center text-xs font-medium text-ink-soft">{item.caption}</p>
+              </>
+            )}
           </motion.div>
         ))}
       </div>
