@@ -23,7 +23,7 @@ export default function AboutHero() {
             Care Built Around Your Smile.
           </h1>
           <p className="max-w-md text-lg leading-relaxed text-ink-soft">
-            Since 2011, Chaithanya Dental Hospital has grown from a single treatment chair to a full
+            Since 2011, chaitanya Dental Hospital has grown from a single treatment chair to a full
             multi-specialty hospital — without ever losing sight of what matters: how a patient feels the
             moment they walk in.
           </p>

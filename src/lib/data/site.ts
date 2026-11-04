@@ -1,13 +1,13 @@
 import type { JourneyStep, TechItem, ValueItem, StatItem } from "@/lib/types";
 
 export const siteConfig = {
-  name: "Chaithanya Dental Hospital",
-  shortName: "Chaithanya Dental",
+  name: "chaitanya Dental Hospital",
+  shortName: "chaitanya Dental",
   tagline: "Your Smile. Our Expertise.",
   description: "Advanced dental care delivered with precision, comfort, and compassion.",
   phone: "+91 86397 99150",
   emergencyPhone: "+91 98765 00000",
-  email: "care@chaithanyadental.example",
+  email: "care@chaitanyadental.example",
   address: "1st and 3rd Floor, Center, Panchumarthi Complex, Tadigadapa, Poranki, Andhra Pradesh 521137",
   addressParts: {
     street: "1st and 3rd Floor, Center, Panchumarthi Complex, Tadigadapa",
@@ -20,7 +20,7 @@ export const siteConfig = {
   },
   /** Used for meta descriptions and structured data. */
   seoDescription:
-    "Chaithanya Dental Hospital in Tadigadapa, Vijayawada offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
+    "chaitanya Dental Hospital in Tadigadapa, Vijayawada offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
   hours: [
     { day: "Monday – Saturday", time: "9:00 AM – 8:00 PM" },
     { day: "Sunday", time: "10:00 AM – 2:00 PM (Emergencies only)" },

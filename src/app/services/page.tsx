@@ -8,7 +8,7 @@ import SimpleCTA from "@/components/sections/SimpleCTA";
 export const metadata: Metadata = pageMetadata({
   title: "Dental Treatments in Vijayawada",
   description:
-    "Explore 12 dental treatments at Chaithanya Dental Hospital, Vijayawada: dental implants, root canal, braces and aligners, teeth whitening, kids' dentistry and more.",
+    "Explore 12 dental treatments at chaitanya Dental Hospital, Vijayawada: dental implants, root canal, braces and aligners, teeth whitening, kids' dentistry and more.",
   path: "/services",
 });
 

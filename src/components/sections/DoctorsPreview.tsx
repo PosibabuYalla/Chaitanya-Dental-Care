@@ -19,7 +19,7 @@ export default function DoctorsPreview() {
       <SectionHeading
         kicker="Our Team"
         title="Meet the Specialists Behind Your Smile"
-        description="Every doctor at Chaithanya Dental brings deep specialisation and a genuinely gentle chairside manner."
+        description="Every doctor at chaitanya Dental brings deep specialisation and a genuinely gentle chairside manner."
       />
 
       <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

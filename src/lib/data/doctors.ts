@@ -11,7 +11,7 @@ export const doctors: Doctor[] = [
     experienceYears: 17,
     languages: ["English", "Hindi", "Telugu"],
     tone: "sky",
-    bio: "Dr. Ananya Rao founded Chaithanya Dental Hospital with a vision of blending advanced implant surgery with a genuinely calm patient experience. She has placed over 6,000 implants and trains visiting surgeons in guided implant protocols.",
+    bio: "Dr. Ananya Rao founded chaitanya Dental Hospital with a vision of blending advanced implant surgery with a genuinely calm patient experience. She has placed over 6,000 implants and trains visiting surgeons in guided implant protocols.",
     philosophy: "Every treatment plan should be as unique as the patient it's built for — precision first, comfort always.",
     treatments: ["Dental Implants", "Full-Mouth Rehabilitation", "Oral Surgery"],
     education: [

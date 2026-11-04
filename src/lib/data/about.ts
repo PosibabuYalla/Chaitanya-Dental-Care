@@ -3,7 +3,7 @@ export const timeline = [
   { year: "2014", title: "First Expansion", description: "A second treatment suite and our first in-house digital X-ray unit are added." },
   { year: "2017", title: "Specialist Team Formed", description: "Orthodontic, pediatric, and cosmetic specialists join, forming a true multi-specialty practice." },
   { year: "2020", title: "Digital Transformation", description: "Full adoption of intraoral scanning, CAD/CAM crowns, and 3D implant planning." },
-  { year: "2023", title: "New Hospital Building", description: "Chaithanya Dental Hospital relocates to a purpose-built four-storey facility." },
+  { year: "2023", title: "New Hospital Building", description: "chaitanya Dental Hospital relocates to a purpose-built four-storey facility." },
   { year: "2026", title: "10,000+ Smiles", description: "We cross 10,000 patients served, with a 98% satisfaction rate across all treatments." },
 ];
 

@@ -117,7 +117,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="max-w-md text-base leading-relaxed text-ink-soft">
-              At Chaithanya Dental Hospital in Tadigadapa, Vijayawada, we believe a healthy smile can brighten your life. With advanced
+              At chaitanya Dental Hospital in Tadigadapa, Vijayawada, we believe a healthy smile can brighten your life. With advanced
               technology, expert dentists, and a patient-first approach, we provide gentle, precise, and
               long-lasting dental care for every stage of life.
             </p>

@@ -222,7 +222,7 @@ export default function ServicesOrbit() {
             Under One Roof
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
-            From preventive care to advanced treatments, Chaithanya Dental Hospital offers comprehensive dental treatment in Vijayawada for all age groups.
+            From preventive care to advanced treatments, chaitanya Dental Hospital offers comprehensive dental treatment in Vijayawada for all age groups.
           </p>
         </RevealOnScroll>
 

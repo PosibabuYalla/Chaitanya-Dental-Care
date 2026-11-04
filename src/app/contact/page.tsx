@@ -7,7 +7,7 @@ import ContactForm from "@/components/contact/ContactForm";
 export const metadata: Metadata = pageMetadata({
   title: "Contact & Directions",
   description:
-    "Visit Chaithanya Dental Hospital at Panchumarthi Complex, Tadigadapa, Poranki, Vijayawada. Call +91 86397 99150, email us, or check opening hours and directions.",
+    "Visit chaitanya Dental Hospital at Panchumarthi Complex, Tadigadapa, Poranki, Vijayawada. Call +91 86397 99150, email us, or check opening hours and directions.",
   path: "/contact",
 });
 

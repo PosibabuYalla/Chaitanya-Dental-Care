@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!doctor) return {};
   return pageMetadata({
     title: `${doctor.name}, ${doctor.specialty}`,
-    description: `${doctor.name}, ${doctor.specialty} at Chaithanya Dental Hospital, Vijayawada. ${doctor.bio}`,
+    description: `${doctor.name}, ${doctor.specialty} at chaitanya Dental Hospital, Vijayawada. ${doctor.bio}`,
     path: `/team/${doctor.slug}`,
     type: "profile",
   });

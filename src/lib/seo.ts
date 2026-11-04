@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/data/site";
 const vercelProductionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (vercelProductionUrl ? `https://${vercelProductionUrl}` : "https://www.chaithanyadental.example")
+  (vercelProductionUrl ? `https://${vercelProductionUrl}` : "https://www.chaitanyadental.example")
 ).replace(/\/$/, "");
 
 export const absoluteUrl = (path = "/") => `${SITE_URL}${path === "/" ? "" : path}`;
