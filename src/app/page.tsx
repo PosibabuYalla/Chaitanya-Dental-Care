@@ -14,10 +14,10 @@ import BlogPreview from "@/components/sections/BlogPreview";
 import AppointmentCTA from "@/components/sections/AppointmentCTA";
 
 export const metadata: Metadata = pageMetadata({
-  title: "chaitanya Dental Hospital – Dentist in Tadigadapa, Vijayawada",
+  title: "Chaitanya Dental Care – Dentist in Tadigadapa, Vijayawada",
   absoluteTitle: true,
   description:
-    "chaitanya Dental Hospital in Tadigadapa, Vijayawada offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
+    "Chaitanya Dental Care in Vijayawada — precision dentistry with in-house CAD/CAM technology, laser-assisted care, and an ethical patient-first approach. Book your visit today.",
   path: "/",
 });
 

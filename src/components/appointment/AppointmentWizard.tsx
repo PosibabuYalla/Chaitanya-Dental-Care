@@ -254,7 +254,7 @@ export default function AppointmentWizard() {
                   ))}
                 </div>
                 <p className="mx-auto max-w-sm text-center text-sm text-ink-soft">
-                  A confirmation call will follow shortly. Thank you for choosing chaitanya Dental Hospital.
+                  A confirmation call will follow shortly. Thank you for choosing Chaitanya Dental Care.
                 </p>
               </StepShell>
             )}

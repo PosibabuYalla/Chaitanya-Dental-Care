@@ -115,7 +115,7 @@ export default function Hero() {
           className="flex flex-col items-start gap-5 sm:gap-6 lg:w-[40%]"
         >
           <span className="inline-flex items-center glass-pill px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-sky-deep backdrop-blur-sm">
-            <span className="hidden sm:inline">Dental Hospital · </span>Tadigadapa, Vijayawada
+            <span className="hidden sm:inline">Dental Care · </span>Tadigadapa, Poranki, Vijayawada
           </span>
 
           <h1 className="font-display text-[2.35rem] font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">

@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/lib/seo";
 import { services } from "@/lib/data/services";
-import { doctors } from "@/lib/data/doctors";
 import { blogPosts } from "@/lib/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/blog", 0.7, "weekly"),
     page("/gallery", 0.5),
     ...services.map((s) => page(`/services/${s.slug}`, 0.8)),
-    ...doctors.map((d) => page(`/team/${d.slug}`, 0.6)),
     ...blogPosts.map((p) => ({ ...page(`/blog/${p.slug}`, 0.6, "yearly"), lastModified: new Date(p.date) })),
   ];
 }

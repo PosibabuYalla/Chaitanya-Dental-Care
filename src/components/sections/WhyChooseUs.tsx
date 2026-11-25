@@ -25,11 +25,12 @@ export default function WhyChooseUs() {
         <div className="flex flex-col gap-6">
           <SectionKicker>Why Choose Us</SectionKicker>
           <h2 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-            A Hospital Built Around Patient Comfort
+            A Practice Built Around the Patient
           </h2>
           <p className="text-base leading-relaxed text-ink-soft sm:text-lg">
-            Every detail, from our sterilisation protocol to our treatment chairs, is designed around one
-            question: what makes this easier for the patient in front of us?
+            Dentistry should be driven by clinical judgement and individual patient needs — not commercial
+            targets. Every decision at Chaitanya Dental Care is guided by one principle: the patient&apos;s
+            well-being comes first.
           </p>
 
           <div className="mt-2 grid gap-2.5 sm:grid-cols-2 sm:gap-3">

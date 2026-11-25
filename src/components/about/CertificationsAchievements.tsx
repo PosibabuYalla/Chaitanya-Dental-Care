@@ -10,7 +10,7 @@ import { certifications, achievements } from "@/lib/data/about";
 export default function CertificationsAchievements() {
   return (
     <ClaySection>
-      <SectionHeading kicker="Recognised Standards" title="Certifications & Accreditations" />
+      <SectionHeading kicker="Our Capabilities" title="Technology & Clinical Approach" />
 
       <Stagger className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {certifications.map((c) => (
@@ -25,7 +25,7 @@ export default function CertificationsAchievements() {
       </Stagger>
 
       <div className="mt-20">
-        <SectionHeading kicker="By the Numbers" title="Achievements That Reflect Our Standard of Care" />
+        <SectionHeading kicker="At a Glance" title="Chaitanya Dental Care in Numbers" />
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {achievements.map((a) => (
             <ClayStat key={a.label} value={a.value} label={a.label} variant="sparkle" />

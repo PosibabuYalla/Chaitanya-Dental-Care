@@ -7,7 +7,7 @@ import SimpleCTA from "@/components/sections/SimpleCTA";
 export const metadata: Metadata = pageMetadata({
   title: "Our Dentists & Specialists",
   description:
-    "Meet the dental surgeons, orthodontists, implantologists and hygienists at chaitanya Dental Hospital, Tadigadapa — specialists known for gentle chairside care.",
+    "Meet the dental team at Chaitanya Dental Care, Vijayawada — specialists committed to clinical excellence, ethical treatment, and patient-first care.",
   path: "/team",
 });
 
@@ -17,8 +17,8 @@ export default function TeamPage() {
       <TeamHero />
       <TeamGrid />
       <SimpleCTA
-        title="Book a Consultation With Our Specialists"
-        description="Tell us your concern and we'll match you with the right doctor."
+        title="Ready to Book a Consultation?"
+        description="Reach out and we'll match you with the right doctor for your needs."
         variant="chair"
         tone="sky"
       />

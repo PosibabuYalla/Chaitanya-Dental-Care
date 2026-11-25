@@ -21,8 +21,8 @@ export default function Footer() {
         <div className="flex flex-col gap-5">
           <Logo />
           <p className="max-w-xs text-sm leading-relaxed text-ink-soft">
-            Premium, technology-led dental care delivered with precision, comfort, and compassion — for every
-            member of your family.
+            Dental care driven by clinical excellence, precision, and an ethical patient-first approach —
+            with in-house CAD/CAM technology and two branches in Vijayawada.
           </p>
           <div className="flex gap-2.5">
             {socialLinks.map(({ href, label, Icon }) => (

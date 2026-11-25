@@ -16,7 +16,7 @@ export default function ContactInfo() {
             <LuMapPin className="h-5 w-5" />
           </span>
           <div>
-            <h2 className="font-display text-2xl font-bold text-ink">Visit Us in Tadigadapa</h2>
+            <h2 className="font-display text-2xl font-bold text-ink">Visit Us in Tadigadapa, Poranki</h2>
             <address className="mt-2 text-base not-italic leading-relaxed text-ink-soft">{siteConfig.address}</address>
           </div>
           <div className="flex flex-col gap-1.5 border-t border-ink/10 pt-4">

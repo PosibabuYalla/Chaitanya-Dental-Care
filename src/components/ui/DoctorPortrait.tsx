@@ -1,3 +1,5 @@
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import type { ClayTone } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -12,22 +14,41 @@ const toneClasses: Record<ClayTone, string> = {
 export default function DoctorPortrait({
   initials,
   tone,
+  photo,
+  name,
   className,
 }: {
   initials: string;
   tone: ClayTone;
+  photo?: StaticImageData;
+  name?: string;
   className?: string;
 }) {
+  if (photo) {
+    return (
+      <div className={cn("relative h-56 w-full sm:h-60", className)}>
+        <Image
+          src={photo}
+          alt={name ?? initials}
+          fill
+          placeholder="blur"
+          sizes="(min-width: 640px) 240px, 180px"
+          className="object-cover object-top"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(
-        "glass-highlight relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-[2rem] border border-white/70 bg-gradient-to-br shadow-glass backdrop-blur-md",
+        "relative flex h-56 w-full items-center justify-center bg-gradient-to-br sm:h-60",
         toneClasses[tone],
         className,
       )}
     >
-      <span className="font-display text-4xl font-extrabold text-ink/70">{initials}</span>
-      <div className="absolute -bottom-6 -right-6 h-20 w-20 rounded-full bg-white/25 blur-2xl" />
+      <span className="font-display text-5xl font-extrabold text-ink/60">{initials}</span>
+      <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-white/25 blur-2xl" />
     </div>
   );
 }

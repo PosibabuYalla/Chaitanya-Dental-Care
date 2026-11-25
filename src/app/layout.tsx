@@ -7,6 +7,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileBookBar from "@/components/layout/MobileBookBar";
+import BookingPopup from "@/components/layout/BookingPopup";
 import ToothCursor from "@/components/cursor/ToothCursor";
 import PageTransition from "@/components/layout/PageTransition";
 import EntryLoader, { entryPlayedScript } from "@/components/layout/EntryLoader";
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </PageTransition>
           <Footer />
           <MobileBookBar />
+          <BookingPopup />
         </EntryLoader>
       </body>
     </html>

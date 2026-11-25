@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "motion/react";
 import { LuArrowRight } from "react-icons/lu";
 import ClaySection, { SectionHeading } from "@/components/ui/ClaySection";
@@ -9,36 +8,45 @@ import ClayButton from "@/components/ui/ClayButton";
 import DoctorPortrait from "@/components/ui/DoctorPortrait";
 import { doctors } from "@/lib/data/doctors";
 
-const featured = ["ananya-rao", "karthik-menon", "priya-sharma", "arjun-verma"];
-
 export default function DoctorsPreview() {
-  const items = featured.map((slug) => doctors.find((d) => d.slug === slug)!);
-
+  const previewDoctors = [
+    "venigalla-chaitanya",
+    "dhanya-abhiram-kamireddy",
+    "sai-nath-bhukya",
+    "samata-avula",
+  ].map((s) => doctors.find((d) => d.slug === s)).filter(Boolean) as typeof doctors;
   return (
     <ClaySection>
       <SectionHeading
         kicker="Our Team"
         title="Meet the Specialists Behind Your Smile"
-        description="Every doctor at chaitanya Dental brings deep specialisation and a genuinely gentle chairside manner."
+        description="Every doctor at Chaitanya Dental Care brings deep specialisation, clinical precision, and a genuine patient-first approach."
       />
 
-      <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((doctor) => (
-          <motion.div key={doctor.slug} variants={staggerItem}>
-            <Link href={`/team/${doctor.slug}`} data-cursor-hover className="group block">
-              <motion.div whileHover={{ y: -6 }} transition={{ type: "spring", stiffness: 300, damping: 22 }} className="flex flex-col gap-4">
-                <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 260, damping: 20 }}>
-                  <DoctorPortrait initials={doctor.initials} tone={doctor.tone} />
-                </motion.div>
-                <div className="text-center">
-                  <h3 className="font-display text-base font-bold text-ink">{doctor.name}</h3>
-                  <p className="text-xs font-medium text-ink-soft">{doctor.specialty}</p>
-                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-coral-deep opacity-0 transition-opacity group-hover:opacity-100">
-                    View profile <LuArrowRight className="h-3 w-3" />
+      <Stagger className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-4">
+        {previewDoctors.map((doctor) => (
+          <motion.div key={doctor.slug} variants={staggerItem} className="w-full">
+            <motion.div
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              className="glass glass-highlight overflow-hidden"
+            >
+              <DoctorPortrait
+                initials={doctor.initials}
+                tone={doctor.tone}
+                photo={doctor.photo}
+                name={doctor.name}
+              />
+              <div className="px-4 py-4 text-center">
+                <h3 className="font-display text-sm font-bold leading-snug text-ink">{doctor.name}</h3>
+                <p className="mt-1 text-xs font-medium text-ink-soft">{doctor.specialty}</p>
+                {doctor.experienceYears >= 10 && (
+                  <span className="mt-2 inline-block rounded-full bg-sky/10 px-3 py-0.5 text-[11px] font-semibold text-sky-deep">
+                    {doctor.experienceYears}+ yrs experience
                   </span>
-                </div>
-              </motion.div>
-            </Link>
+                )}
+              </div>
+            </motion.div>
           </motion.div>
         ))}
       </Stagger>

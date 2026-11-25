@@ -1,10 +1,10 @@
 import type { JourneyStep, TechItem, ValueItem, StatItem } from "@/lib/types";
 
 export const siteConfig = {
-  name: "chaitanya Dental Hospital",
-  shortName: "chaitanya Dental",
-  tagline: "Your Smile. Our Expertise.",
-  description: "Advanced dental care delivered with precision, comfort, and compassion.",
+  name: "Chaitanya Dental Care",
+  shortName: "Chaitanya Dental",
+  tagline: "Dentistry with Precision. Care with Purpose.",
+  description: "Dental care driven by clinical excellence, precision, and ethical patient-centred treatment.",
   phone: "+91 86397 99150",
   emergencyPhone: "+91 98765 00000",
   email: "care@chaitanyadental.example",
@@ -20,7 +20,7 @@ export const siteConfig = {
   },
   /** Used for meta descriptions and structured data. */
   seoDescription:
-    "chaitanya Dental Hospital in Tadigadapa, Vijayawada offers dental implants, root canals, braces, aligners and cosmetic dentistry. Book your visit today.",
+    "Chaitanya Dental Care in Vijayawada — founded in 2019 by Dr. Venigalla Chaitanya. Precision dentistry with in-house CAD/CAM technology, laser-assisted care, and an ethical patient-first approach.",
   hours: [
     { day: "Monday – Saturday", time: "9:00 AM – 8:00 PM" },
     { day: "Sunday", time: "10:00 AM – 2:00 PM (Emergencies only)" },
@@ -49,10 +49,10 @@ export const navLinks = [
 ];
 
 export const heroStats: StatItem[] = [
-  { value: "10K+", label: "Happy Patients", variant: "heart" },
-  { value: "15+", label: "Years Experience", variant: "sparkle" },
-  { value: "25+", label: "Dental Specialists", variant: "tooth" },
-  { value: "98%", label: "Patient Satisfaction", variant: "shield" },
+  { value: "2019", label: "Year Founded", variant: "sparkle" },
+  { value: "2", label: "Clinic Branches", variant: "tooth" },
+  { value: "CAD/CAM", label: "In-House Digital Lab", variant: "heart" },
+  { value: "Laser", label: "Assisted Dentistry", variant: "shield" },
 ];
 
 export const journeySteps: JourneyStep[] = [
@@ -73,19 +73,19 @@ export const techItems: TechItem[] = [
 ];
 
 export const valueItems: ValueItem[] = [
-  { title: "Trust", description: "Transparent plans, honest timelines, no surprise costs.", variant: "shield" },
-  { title: "Precision", description: "Technology-guided treatment planning, down to the millimetre.", variant: "scanner" },
-  { title: "Comfort", description: "Every procedure designed around patient calm, not just clinical speed.", variant: "chair" },
-  { title: "Innovation", description: "Continuous investment in modern dental technology and technique.", variant: "sparkle" },
-  { title: "Safety", description: "Rigorous sterilisation protocol exceeding standard clinical guidelines.", variant: "cross" },
-  { title: "Compassion", description: "Every patient treated as a person first, a case second.", variant: "heart" },
+  { title: "Clinical Judgement", description: "Every treatment decision guided by accurate diagnosis, not commercial targets.", variant: "shield" },
+  { title: "Precision", description: "Standardised clinical protocols and in-house CAD/CAM technology for consistent, high-quality outcomes.", variant: "scanner" },
+  { title: "Patient-First", description: "Patient well-being leads every decision — treatment is recommended based on need, never oversold.", variant: "heart" },
+  { title: "Innovation", description: "In-house digital workflows and laser-assisted care bring modern dentistry closer to every patient.", variant: "sparkle" },
+  { title: "Ethical Practice", description: "Transparent recommendations and honest communication, always in the best interest of the patient.", variant: "cross" },
+  { title: "Patient Education", description: "We ensure every patient understands their treatment and feels confident in their decisions.", variant: "chair" },
 ];
 
 export const whyChooseUs = [
-  "Experienced Specialists",
-  "Advanced Technology",
-  "Personalised Treatment",
-  "Sterile & Safe Environment",
-  "Transparent Pricing",
-  "Patient-Centered Care",
+  "Clinical Excellence",
+  "In-House CAD/CAM Technology",
+  "Laser-Assisted Dentistry",
+  "Ethical Treatment Recommendations",
+  "Standardised Clinical Protocols",
+  "Patient Education & Comfort",
 ];

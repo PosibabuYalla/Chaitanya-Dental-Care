@@ -3,7 +3,6 @@ import hospitalFront from "@/components/gallery/Infront of hospital.webp";
 import doctorTreating from "@/components/gallery/Doctor treating Patient.webp";
 import clinicFront from "@/components/gallery/Chaitanya Dental Care.webp";
 import reception from "@/components/gallery/Reception.webp";
-import drChaitanya from "@/components/gallery/Dr. Chaitanya.webp";
 import dentalRoom from "@/components/gallery/Dental Room.webp";
 import toothMachine from "@/components/gallery/Tooth MACHINE.webp";
 import beforeTeeth from "@/components/gallery/Before Teeth.webp";
@@ -45,7 +44,6 @@ export const beforeAfterPairs: BeforeAfterPair[] = [{ before: beforeTeeth, after
 export const galleryItems: GalleryItem[] = [
   // Existing hero photos — lead the homepage preview.
   { id: "p1", category: "Clinic", caption: "In front of Chaitanya Dental Care", tone: "sky", variant: "building", span: "wide", image: hospitalFront },
-  { id: "p2", category: "Doctors", caption: "Dr. Chaitanya", tone: "coral", variant: "cross", span: "tall", image: drChaitanya },
   { id: "p3", category: "Patients", caption: "Doctor treating a patient", tone: "pink", variant: "sparkle", span: "square", image: doctorTreating },
   { id: "p4", category: "Clinic", caption: "Reception & waiting lounge", tone: "pink", variant: "building", span: "square", image: reception },
   { id: "p5", category: "Clinic", caption: "Chaitanya Dental Care", tone: "sky", variant: "building", span: "wide", image: clinicFront },

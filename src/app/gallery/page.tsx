@@ -7,7 +7,7 @@ import SimpleCTA from "@/components/sections/SimpleCTA";
 export const metadata: Metadata = pageMetadata({
   title: "Clinic Gallery",
   description:
-    "Take a look inside chaitanya Dental Hospital, Vijayawada — our treatment rooms, digital dental technology, our team and the confident smiles we help create.",
+    "Take a look inside Chaitanya Dental Care, Vijayawada — our treatment rooms, in-house CAD/CAM lab, digital dental technology, our team, and patient results.",
   path: "/gallery",
 });
 

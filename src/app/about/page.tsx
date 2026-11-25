@@ -8,9 +8,9 @@ import CertificationsAchievements from "@/components/about/CertificationsAchieve
 import SimpleCTA from "@/components/sections/SimpleCTA";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Our Dental Hospital",
+  title: "About Chaitanya Dental Care",
   description:
-    "Since 2011, chaitanya Dental Hospital in Tadigadapa, Vijayawada has grown into a multi-specialty dental practice built on precision, comfort and compassion.",
+    "Established in 2019 by Dr. Venigalla Chaitanya, Chaitanya Dental Care is built on clinical excellence, precision, and ethical patient-centred treatment — with in-house CAD/CAM technology and two branches in Vijayawada.",
   path: "/about",
 });
 
@@ -23,8 +23,8 @@ export default function AboutPage() {
       <ClinicEnvironment />
       <CertificationsAchievements />
       <SimpleCTA
-        title="Experience Dental Care Differently."
-        description="Come see why thousands of patients trust us with their smiles."
+        title="Precision in Practice. Excellence in Every Smile."
+        description="Experience dental care guided by clinical judgement, modern technology, and genuine patient-first values."
         variant="tooth"
         tone="pink"
       />

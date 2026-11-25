@@ -20,12 +20,12 @@ export default function AboutHero() {
         >
           <SectionKicker>Our Story</SectionKicker>
           <h1 className="font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl">
-            Care Built Around Your Smile.
+            Dentistry with Precision. Care with Purpose.
           </h1>
           <p className="max-w-md text-lg leading-relaxed text-ink-soft">
-            Since 2011, chaitanya Dental Hospital has grown from a single treatment chair to a full
-            multi-specialty hospital — without ever losing sight of what matters: how a patient feels the
-            moment they walk in.
+            Established in 2019 by Dr. Venigalla Chaitanya, Chaitanya Dental Care was founded with a vision
+            to redefine dental care through clinical excellence, precision, and ethical patient-centred
+            treatment — where the patient&apos;s well-being always comes first.
           </p>
         </motion.div>
 

@@ -1,45 +1,78 @@
-"use client";
-
-import { useState, type PointerEvent } from "react";
-import { LuStar, LuQuote } from "react-icons/lu";
+import { LuStar, LuExternalLink, LuPenLine } from "react-icons/lu";
+import { FcGoogle } from "react-icons/fc";
 import ClaySection, { SectionHeading } from "@/components/ui/ClaySection";
 import { testimonials } from "@/lib/data/testimonials";
-import type { Testimonial } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { fetchGooglePlaceReviews, type GooglePlaceData } from "@/lib/googlePlaces";
+import ReviewsMarquee from "./ReviewsMarquee";
 
-// ~7s of travel per card keeps the speed readable regardless of how many reviews there are.
-const SECONDS_PER_CARD = 7;
+// Fallback stats shown when the API is not configured — matches the live Google listing.
+const FALLBACK_RATING = 4.9;
+const FALLBACK_TOTAL = 623;
+const FALLBACK_MAPS_URL =
+  "https://www.google.com/maps/place/Chaitanya+Dental+Care/@16.5114,80.6265,17z";
 
-function ReviewCard({ t }: { t: Testimonial }) {
+function StarRow({ rating, size = "sm" }: { rating: number; size?: "sm" | "lg" }) {
+  const cls = size === "lg" ? "h-5 w-5" : "h-4 w-4";
   return (
-    <div className="glass glass-highlight relative w-[300px] shrink-0 p-6 sm:w-[340px] sm:p-7">
-      <LuQuote className="h-7 w-7 text-coral/50" />
-      <p className="mt-3 text-sm leading-relaxed text-ink-soft">&ldquo;{t.quote}&rdquo;</p>
-      <div className="mt-5 flex items-center gap-3">
-        <span className="glass-pill flex h-11 w-11 shrink-0 items-center justify-center glass-tint font-display text-sm font-bold text-ink">
-          {t.initials}
-        </span>
-        <div>
-          <p className="text-sm font-bold text-ink">{t.name}</p>
-          <p className="text-xs text-ink-soft">{t.treatment}</p>
-        </div>
-        <div className="ml-auto flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
-          {Array.from({ length: t.rating }).map((_, i) => (
-            <LuStar key={i} className="h-3.5 w-3.5 fill-coral text-coral-deep" aria-hidden />
-          ))}
-        </div>
-      </div>
+    <div className="flex" aria-hidden>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <LuStar
+          key={i}
+          className={`${cls} ${i < Math.round(rating) ? "fill-[#FBBC04] text-[#F9AB00]" : "fill-transparent text-ink-soft/20"}`}
+        />
+      ))}
     </div>
   );
 }
 
-export default function PatientStories() {
-  // Touch: press-and-hold pauses, release resumes. Mouse uses CSS hover (below),
-  // which Tailwind only applies on devices that can actually hover.
-  const [touchPaused, setTouchPaused] = useState(false);
-  const onTouch = (paused: boolean) => (e: PointerEvent) => {
-    if (e.pointerType !== "mouse") setTouchPaused(paused);
-  };
+function GoogleTrustBadge({ data }: { data: GooglePlaceData | null }) {
+  const rating = data?.rating ?? FALLBACK_RATING;
+  const total = data?.totalReviews ?? FALLBACK_TOTAL;
+  const mapsUrl = data?.mapsUrl ?? FALLBACK_MAPS_URL;
+  const writeUrl = data?.writeReviewUrl;
+
+  return (
+    <div className="mt-8 flex flex-wrap items-center gap-3">
+      {/* Main badge */}
+      <a
+        href={mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${rating} stars · ${total.toLocaleString()} reviews on Google — open in Google Maps`}
+        className="glass glass-highlight group inline-flex items-center gap-4 px-5 py-4 transition-all hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-coral/60"
+      >
+        <FcGoogle className="h-9 w-9 shrink-0" />
+        <div>
+          <div className="flex items-center gap-2">
+            <StarRow rating={rating} size="lg" />
+            <span className="text-xl font-bold text-ink">{rating.toFixed(1)}</span>
+          </div>
+          <p className="mt-0.5 text-sm text-ink-soft">
+            {total.toLocaleString()} reviews on Google
+          </p>
+        </div>
+        <LuExternalLink className="ml-1 h-4 w-4 shrink-0 text-ink-soft transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+      </a>
+
+      {/* Write a review shortcut */}
+      {writeUrl && (
+        <a
+          href={writeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass glass-pill inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:text-ink"
+        >
+          <LuPenLine className="h-4 w-4" />
+          Write a review
+        </a>
+      )}
+    </div>
+  );
+}
+
+export default async function PatientStories() {
+  const googleData = await fetchGooglePlaceReviews();
+  const hasLiveReviews = googleData && googleData.reviews.length > 0;
 
   return (
     <ClaySection containerClassName="px-0! sm:px-8! lg:px-12!">
@@ -49,52 +82,14 @@ export default function PatientStories() {
           title="Real Patients. Real Confidence."
           description="A few of the thousands of smiles we've had the privilege of treating."
         />
+        <GoogleTrustBadge data={googleData} />
       </div>
 
-      <div
-        role="region"
-        aria-label="Patient reviews"
-        className={cn(
-          "group relative mt-12 overflow-hidden pb-4 [touch-action:pan-y]",
-          // Soft fade at both edges so cards glide in and out
-          "[mask-image:linear-gradient(to_right,transparent,#000_6%,#000_94%,transparent)]",
-          // Reduced motion: no auto-scroll, just a swipeable row
-          "motion-reduce:no-scrollbar motion-reduce:overflow-x-auto motion-reduce:px-5 motion-reduce:[mask-image:none] sm:motion-reduce:px-0",
-        )}
-        onPointerDown={onTouch(true)}
-        onPointerUp={onTouch(false)}
-        onPointerCancel={onTouch(false)}
-        onPointerLeave={onTouch(false)}
-      >
-        {/*
-          Two identical copies, each with trailing padding equal to the card gap,
-          animated by the existing `marquee` keyframes (0 → -50%). At -50% the
-          second copy sits exactly where the first began, so the loop is seamless.
-        */}
-        <div
-          className={cn(
-            "flex w-max animate-marquee",
-            "group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]",
-            "motion-reduce:animate-none",
-          )}
-          style={{
-            animationDuration: `${testimonials.length * SECONDS_PER_CARD}s`,
-            animationPlayState: touchPaused ? "paused" : undefined,
-          }}
-        >
-          {[0, 1].map((copy) => (
-            <div
-              key={copy}
-              className={cn("flex shrink-0 gap-4 pr-4 sm:gap-6 sm:pr-6", copy === 1 && "motion-reduce:hidden")}
-              aria-hidden={copy === 1 || undefined}
-            >
-              {testimonials.map((t) => (
-                <ReviewCard key={`${copy}-${t.id}`} t={t} />
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      {hasLiveReviews ? (
+        <ReviewsMarquee mode="google" reviews={googleData.reviews} />
+      ) : (
+        <ReviewsMarquee mode="static" reviews={testimonials} />
+      )}
     </ClaySection>
   );
 }

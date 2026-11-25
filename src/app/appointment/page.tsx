@@ -7,7 +7,7 @@ import AppointmentWizard from "@/components/appointment/AppointmentWizard";
 export const metadata: Metadata = pageMetadata({
   title: "Book a Dental Appointment",
   description:
-    "Book a dental appointment online at chaitanya Dental Hospital, Vijayawada in six quick steps — choose a treatment, doctor and time. No payment required upfront.",
+    "Book a dental appointment online at Chaitanya Dental Care, Vijayawada — choose a treatment, doctor, and time. No payment required upfront.",
   path: "/appointment",
 });
 

@@ -1,17 +1,35 @@
 export const timeline = [
-  { year: "2011", title: "Founded", description: "Dr. Ananya Rao opens a single-chair clinic in Tadigadapa with a simple promise: comfort first." },
-  { year: "2014", title: "First Expansion", description: "A second treatment suite and our first in-house digital X-ray unit are added." },
-  { year: "2017", title: "Specialist Team Formed", description: "Orthodontic, pediatric, and cosmetic specialists join, forming a true multi-specialty practice." },
-  { year: "2020", title: "Digital Transformation", description: "Full adoption of intraoral scanning, CAD/CAM crowns, and 3D implant planning." },
-  { year: "2023", title: "New Hospital Building", description: "chaitanya Dental Hospital relocates to a purpose-built four-storey facility." },
-  { year: "2026", title: "10,000+ Smiles", description: "We cross 10,000 patients served, with a 98% satisfaction rate across all treatments." },
+  {
+    year: "Before",
+    title: "Clinical Foundation at Janatha Dental",
+    description:
+      "Dr. Venigalla Chaitanya serves as a partner at Janatha Dental Clinic, gaining valuable clinical experience and forming the conviction that quality treatment must always take priority over targets.",
+  },
+  {
+    year: "2019",
+    title: "Chaitanya Dental Care Founded",
+    description:
+      "Dr. Venigalla Chaitanya establishes Chaitanya Dental Care with a clear vision: to redefine dental care through clinical excellence, precision, and ethical patient-centred treatment.",
+  },
+  {
+    year: "Growth",
+    title: "In-House CAD/CAM & Laser Technology",
+    description:
+      "Investment in an in-house CAD/CAM dental technology setup gives our doctors greater control over prosthetic planning, design, and fabrication. Laser-assisted oral care is also introduced.",
+  },
+  {
+    year: "Expand",
+    title: "Second Branch — Gurunanak Colony",
+    description:
+      "A second branch opens in Gurunanak Colony, extending our reach while maintaining the same clinical philosophy and unwavering commitment to patient care.",
+  },
 ];
 
 export const certifications = [
-  { name: "NABH Accredited Facility", issuer: "National Accreditation Board for Hospitals" },
-  { name: "ISO 9001:2015 Certified", issuer: "Quality Management Systems" },
-  { name: "Indian Dental Association", issuer: "Member Institution" },
-  { name: "ICOI Fellowship Faculty", issuer: "International Congress of Oral Implantologists" },
+  { name: "In-House CAD/CAM Lab", issuer: "Precision prosthetic planning, design & fabrication" },
+  { name: "Laser-Assisted Dentistry", issuer: "Advanced laser technology for modern oral care" },
+  { name: "Digital Dental Workflows", issuer: "Precision, consistency & improved outcomes" },
+  { name: "Two Clinic Branches", issuer: "Serving patients across Vijayawada" },
 ];
 
 export const clinicRooms = [
@@ -23,8 +41,8 @@ export const clinicRooms = [
 ];
 
 export const achievements = [
-  { value: "10,000+", label: "Patients treated" },
-  { value: "15+", label: "Years in practice" },
-  { value: "6,000+", label: "Implants placed" },
-  { value: "98%", label: "Patient satisfaction" },
+  { value: "2019", label: "Year founded" },
+  { value: "2", label: "Clinic branches" },
+  { value: "In-House", label: "CAD/CAM lab" },
+  { value: "Laser", label: "Assisted dentistry" },
 ];

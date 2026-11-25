@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import ClayContainer from "@/components/ui/ClayContainer";
 import { SectionKicker } from "@/components/ui/ClaySection";
 import HeroPhoto from "@/components/ui/HeroPhoto";
-import treatmentPhoto from "@/components/gallery/Treatment page.webp";
+import treatmentPhoto from "@/components/gallery/Doctor-treating-new.jpg";
 
 export default function ServicesHero() {
   return (

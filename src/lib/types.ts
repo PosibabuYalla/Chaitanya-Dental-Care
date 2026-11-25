@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+export type { StaticImageData };
 
 export type ClayVariant =
   | "tooth"
@@ -67,6 +68,7 @@ export interface Doctor {
   philosophy: string;
   treatments: string[];
   education: { degree: string; institute: string; year: string }[];
+  photo?: StaticImageData;
 }
 
 export interface Testimonial {

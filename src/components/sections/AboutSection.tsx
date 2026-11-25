@@ -40,17 +40,17 @@ const featureCards = [
 ];
 
 const stats = [
-  { icon: <LuUsers className="h-5 w-5 text-sky" />, value: "10K+", label: "Happy Patients" },
-  { icon: <LuStar className="h-5 w-5 text-sky" />, value: "5★", label: "Patient Rating" },
-  { icon: <LuHeart className="h-5 w-5 text-sky" />, value: "15+", label: "Years of Trusted Care" },
+  { icon: <LuUsers className="h-5 w-5 text-sky" />, value: "2019", label: "Year Founded" },
+  { icon: <LuStar className="h-5 w-5 text-sky" />, value: "2", label: "Clinic Branches" },
+  { icon: <LuHeart className="h-5 w-5 text-sky" />, value: "In-House", label: "CAD/CAM Lab" },
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2C9.5 2 7.5 3.5 6.5 5.5C5.5 3.5 3.5 2 2 4C0.5 6 1.5 9 3 11C4 12.5 5 14 5.5 16C6 18 6 20 7 21C7.5 21.5 8 21 8.5 20C9 19 9.5 17 10 16C10.5 15 11 14.5 12 14.5C13 14.5 13.5 15 14 16C14.5 17 15 19 15.5 20C16 21 16.5 21.5 17 21C18 20 18 18 18.5 16C19 14 20 12.5 21 11C22.5 9 23.5 6 22 4C20.5 2 18.5 3.5 17.5 5.5C16.5 3.5 14.5 2 12 2Z" fill="#38b6e8"/>
       </svg>
     ),
-    value: "20+",
-    label: "Advanced Treatments",
+    value: "Laser",
+    label: "Assisted Dentistry",
   },
 ];
 
@@ -58,22 +58,22 @@ const bottomCards = [
   {
     icon: <LuEye className="h-6 w-6" />,
     title: "Our Vision",
-    desc: "A healthier, happier community with confident smiles for life.",
+    desc: "To build a trusted dental care institution recognised for clinical excellence, technological advancement, and ethical practice.",
   },
   {
     icon: <LuTarget className="h-6 w-6" />,
     title: "Our Mission",
-    desc: "To deliver exceptional dental care with compassion, innovation, and integrity.",
+    desc: "To provide appropriate treatment through standardised clinical protocols, careful diagnosis, and a patient-first approach.",
   },
   {
     icon: <LuGem className="h-6 w-6" />,
     title: "Our Values",
-    desc: "Patient-first care, trust, transparency, and continuous learning.",
+    desc: "Clinical judgement, precision, ethical treatment recommendations, and genuine patient-first care.",
   },
   {
     icon: <LuUsers className="h-6 w-6" />,
-    title: "Our Team",
-    desc: "Skilled and caring dental professionals dedicated to your smile.",
+    title: "Our Approach",
+    desc: "Greater doctor involvement, in-house CAD/CAM technology, and digital workflows for better precision and outcomes.",
   },
 ];
 
@@ -117,9 +117,9 @@ export default function AboutSection() {
             </h2>
 
             <p className="max-w-md text-base leading-relaxed text-ink-soft">
-              At chaitanya Dental Hospital in Tadigadapa, Vijayawada, we believe a healthy smile can brighten your life. With advanced
-              technology, expert dentists, and a patient-first approach, we provide gentle, precise, and
-              long-lasting dental care for every stage of life.
+              Established in 2019 by Dr. Venigalla Chaitanya, Chaitanya Dental Care was founded with a vision
+              to redefine dental care through clinical excellence, precision, and ethical patient-centred
+              treatment — where the patient&apos;s well-being always comes first.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">

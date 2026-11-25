@@ -7,7 +7,7 @@ import { timeline } from "@/lib/data/about";
 export default function StoryTimeline() {
   return (
     <ClaySection>
-      <SectionHeading kicker="Our Story" title="From One Chair to a Full Hospital" align="left" />
+      <SectionHeading kicker="Our Journey" title="From a Shared Vision to a Growing Practice" align="left" />
 
       <div className="relative mt-14 flex flex-col gap-8">
         <div className="absolute left-[27px] top-2 hidden h-[calc(100%-1rem)] w-px bg-ink/10 sm:block" />

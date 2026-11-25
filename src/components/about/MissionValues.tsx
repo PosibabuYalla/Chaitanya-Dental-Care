@@ -22,12 +22,13 @@ export default function MissionValues() {
               Our Mission
             </span>
             <h2 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-              Precision Dentistry, Delivered with Heart
+              Quality Beyond Targets
             </h2>
             <p className="text-base leading-relaxed text-ink-soft sm:text-lg">
-              We believe great dentistry sits at the intersection of clinical precision and genuine care. Our
-              mission is to make advanced treatment feel approachable — never rushed, never impersonal, and
-              always explained in plain language.
+              We believe dentistry should be driven by clinical judgement, precision, and the individual needs
+              of every patient — not commercial targets. Our commitment is to provide appropriate treatment
+              through standardised clinical protocols, careful diagnosis, and a patient-first approach.
+              Every treatment decision is guided by one principle: the patient&apos;s well-being comes first.
             </p>
           </motion.div>
           <motion.div
