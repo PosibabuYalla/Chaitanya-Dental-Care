@@ -1,9 +1,8 @@
 import { LuStar, LuExternalLink, LuPenLine } from "react-icons/lu";
 import { FcGoogle } from "react-icons/fc";
 import ClaySection, { SectionHeading } from "@/components/ui/ClaySection";
-import { testimonials } from "@/lib/data/testimonials";
 import { fetchGooglePlaceReviews, type GooglePlaceData } from "@/lib/googlePlaces";
-import ReviewsMarquee from "./ReviewsMarquee";
+import ElfsightReviews from "./ElfsightReviews";
 
 // Fallback stats shown when the API is not configured — matches the live Google listing.
 const FALLBACK_RATING = 4.9;
@@ -72,7 +71,6 @@ function GoogleTrustBadge({ data }: { data: GooglePlaceData | null }) {
 
 export default async function PatientStories() {
   const googleData = await fetchGooglePlaceReviews();
-  const hasLiveReviews = googleData && googleData.reviews.length > 0;
 
   return (
     <ClaySection containerClassName="px-0! sm:px-8! lg:px-12!">
@@ -85,11 +83,7 @@ export default async function PatientStories() {
         <GoogleTrustBadge data={googleData} />
       </div>
 
-      {hasLiveReviews ? (
-        <ReviewsMarquee mode="google" reviews={googleData.reviews} />
-      ) : (
-        <ReviewsMarquee mode="static" reviews={testimonials} />
-      )}
+      <ElfsightReviews />
     </ClaySection>
   );
 }
